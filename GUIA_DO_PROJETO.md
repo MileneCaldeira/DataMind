@@ -2,6 +2,8 @@
 
 Guia de leitura e preservação — 05/11/2026. Não autoriza novas execuções.
 
+**Saneamento técnico concluído no escopo permitido:** ambientes reconstruídos sem inferência, código/documentação com versionamento local ampliado e verificador seguro disponível. Use `python -B scripts/verify_preservation.py` para conferir integridade sem executar modelos. O backup real ainda aguarda dispositivo externo autorizado. [Resultados e limites](reports/saneamento_tecnico_final.md).
+
 **Atualização master:** consulte [STATUS_DATAMIND.md](STATUS_DATAMIND.md), [Entenda a IA](docs/ENTENDA_A_IA.md) e [auditoria master](reports/auditoria_master.md). Os READMEs foram atualizados, mantendo textos históricos. As observações abaixo sobre README desatualizado e Git sem commits descrevem o inventário anterior; o estado atual do versionamento está em [auditoria Git](reports/auditoria_git.md). Nenhum resultado científico foi alterado.
 
 ## Por onde começar

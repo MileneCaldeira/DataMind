@@ -1,6 +1,6 @@
 # Estado do DataMind
 
-Atualizado em 05/11/2026 — auditoria master. Estados técnicos não representam validação clínica.
+Atualizado em 05/11/2026 — saneamento técnico. Estados técnicos não representam validação clínica. Evidências em reports/saneamento_tecnico_final.md.
 
 |Área|Estado|Situação / responsável ou perfil necessário|
 |---|---|---|
@@ -12,11 +12,13 @@ Atualizado em 05/11/2026 — auditoria master. Estados técnicos não representa
 |Resultado primário|CONCLUÍDO|2.198 exames; Δ Brier −0,000613, IC95% [−0,002380; +0,001133]|
 |Cobertura|CONCLUÍDO|531 completas: 49,50% dos exames / 64,81% dos positivos; fallback não acionado|
 |Integridade ativa|VALIDADO INTERNAMENTE|Manifestos Fases 5–9 e entradas conferidos; probabilidades individuais correspondem ao consolidado|
-|Reprodução completa nova|NÃO VERIFICADO|Sem retreino, predição, reextração ECGDeli ou instalação limpa nesta auditoria|
+|Reconstrução dos ambientes|CONCLUÍDO|Duas venvs temporárias; locks exatos, pip check/importações e leitura de sete modelos passaram; originais preservados|
+|Reprodução completa nova|NÃO VERIFICADO|Não executados retreino, predição, reextração ECGDeli ou novas métricas|
+|Snapshots e verificador seguro|CONCLUÍDO|Novo verificador somente leitura; quatro diferenças históricas explícitas, duas versões antigas recuperadas; nove testes de manutenção passaram|
 |Manuscrito v2|CONCLUÍDO — rascunho|Preparado para revisão externa, preservado nesta manutenção|
 |Revisão externa humana|PENDENTE|Cardiologista, bioestatístico e pesquisador/editor; pacote Fase 9 pronto, sem pareceres reais registrados|
-|Git local|VALIDADO INTERNAMENTE — escopo selecionado|Consultar reports/auditoria_git.md para lista, estado do commit e limites; não é cópia integral|
-|Backup independente|PENDENTE|Pesquisadora deve indicar destino autorizado em dispositivo independente; plano em reports/plano_backup.md|
+|Git local|VALIDADO INTERNAMENTE — ampliado|Todo código próprio, testes, configurações, protocolos, manuscritos e documentos científicos principais; dados/modelos ficam no backup; primeiro commit preservado|
+|Backup independente|PENDENTE|Só disco físico 0/C: acessível; conectar e autorizar diretório privado em outro disco. Ferramenta de cópia/restauração testada apenas com fixtures|
 |Uso clínico|BLOQUEADO|Não demonstrados segurança, utilidade, generalização ou validação clínica|
 |Submissão|PENDENTE|Revisão humana, contribuição editorial, autoria, ética institucional, financiamento, conflitos e licença|
 |Nova fase experimental|BLOQUEADO nesta tarefa|Não autorizada; fold 10 já consumido|

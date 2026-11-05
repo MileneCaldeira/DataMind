@@ -1,5 +1,25 @@
 # Plano de backup independente
 
+## Atualização executável — saneamento técnico
+
+Inspeção em 05/11/2026 encontrou somente o disco físico 0 (NVMe de aproximadamente 1 TB), com C: e partições de sistema/recuperação, cerca de 589 GB livres em C:. Nenhuma unidade externa acessível ou destino previamente autorizado foi identificado. Outra pasta em C: não será tratada como backup independente.
+
+**O que precisa da pesquisadora:** conectar SSD/HD externo privado e autorizar um diretório existente nele, informando caminho completo (por exemplo E:/BackupPrivadoDataMind, somente se E: for realmente outro disco). Recomenda-se pelo menos 2 GiB livres para a primeira cópia e folga; manter espaço adicional para versões.
+
+Foi implementado scripts/backup_project.py. Após autorização do destino, executar da raiz:
+
+```powershell
+python -B scripts/backup_project.py --destination "E:/BackupPrivadoDataMind" --authorized-destination
+```
+
+O exemplo NÃO autoriza E: nem cria esse diretório automaticamente. O programa identifica o número do disco via Get-Partition, recusa disco igual, destinos dentro da origem, junções/symlinks que exijam revisão e espaço insuficiente. Cria snapshot datado com sufixo único, copia sem sobrescrever, verifica SHA-256/inventário, verifica estabilidade da origem e restaura quatro arquivos críticos a partir da cópia, sem carregar modelos. Recibo com destino, data, contagem, bytes e hashes fica no snapshot. Cópia interrompida não recebe status PASS e não é apagada.
+
+Nove testes não preditivos passaram; incluem cópia/restauração de fixtures, adulteração, destino dentro da origem e recusa do mesmo disco. **Isso valida a ferramenta nesses cenários, não constitui backup real do projeto nem teste em disco externo.**
+
+As duas venvs foram reconstruídas a partir dos locks no mesmo Windows/Python; importações e leitura dos modelos passaram. A opção --essential omite somente .venv-phase5 e .venv-phase7, mantendo dados, código, modelos, resultados, documentação e .git. Mesmo assim, recomenda-se primeira cópia integral: instalação futura depende da disponibilidade dos pacotes e não foi testada offline. Não remover ambientes originais. Área temporária de reconstrução no disco C: não é backup.
+
+As estimativas e o procedimento manual histórico abaixo permanecem como registro. Preferir agora a ferramenta testada, fechar gravadores e estabilizar o OneDrive antes de executar. O estado real do backup continua **PENDENTE**.
+
 05/11/2026. **PENDENTE:** nenhum destino externo previamente autorizado foi identificado. Não foi criada cópia em local arbitrário nem enviado conteúdo a serviço externo.
 
 ## Necessidade e tamanho

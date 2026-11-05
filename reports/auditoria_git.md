@@ -1,5 +1,17 @@
 # Auditoria Git — primeiro versionamento local
 
+## Atualização: saneamento técnico de 05/11/2026
+
+O primeiro commit **e799a5d** existe, contém os 39 arquivos registrados abaixo e foi preservado. Branch master, sem remoto ou push. O novo commit **bdc086b** acrescenta proteção e histórico científico: 86 caminhos alterados, incluindo .gitattributes, .gitignore, três ferramentas de manutenção, testes não preditivos, registro de snapshots, protocolos, manuscritos v1/v2, apresentação, relatórios científicos, tabelas agregadas, locks, configurações e manifestos. Lista exata: `git diff-tree --no-commit-id --name-status -r bdc086b`.
+
+Todos os 32 arquivos Python próprios em src/scripts/tests estão rastreados. Código experimental antigo e manuscritos mantêm bytes originais. .gitattributes impede normalização automática dos finais de linha. .gitignore agora protege dados/amostras, ambientes, modelos, probabilidades CSV, fontes bibliográficas baixadas, binários, logs e arquivos típicos de credencial. Nenhuma exclusão local foi realizada.
+
+Diff completo do primeiro saneamento: 553.634 caracteres / 7.889 linhas, SHA-256 bf792fb1290debdc5a9d62cc91deb839763d8daa3094574230eea1e94aa580eb. Blobs staged comparados byte a byte com arquivos locais; leitura textual, sintaxe, caminhos e padrões de segredos verificados. Dezessete avisos de whitespace correspondiam exatamente a dois espaços de quebra Markdown em três documentos congelados: preservados, não “corrigidos”.
+
+Um commit documental subsequente registra o resultado final, atualiza README/STATUS/guia/plano/esta auditoria e inclui as notas de revisão remanescentes. Seu conteúdo exato está no histórico Git e no relatório final; nenhum commit anterior foi emendado. Dados, modelos, probabilidades por registro e cópias de terceiros permanecem fora do Git. Essa exclusão é deliberada e exige backup independente, ainda pendente.
+
+Os tópicos abaixo descrevem o primeiro commit, não o estado atual completo. Licença para publicação continua pendente; commits são exclusivamente locais.
+
 05/11/2026. Decisão: **seleção apta para primeiro commit exclusivamente local**, após conferência do index. Não configurar remoto, publicar ou enviar arquivos. Este documento registra a seleção; a efetivação é comprovada pelo commit no histórico local, não pela existência desta lista.
 
 ## Estado encontrado

@@ -36,6 +36,12 @@ Dados → auditoria/integração → transformações no treino → modelos → 
 
 ## Consulta segura e reprodução
 
+**Saneamento técnico de 05/11/2026:** consulta de integridade atual por `python -B scripts/verify_preservation.py`. O comando não carrega modelos nem grava resultados; distingue snapshots históricos, congelamentos ativos e documentação atual. Testes seguros: `python -B -m unittest discover -s tests -p test_maintenance.py -v`. Não omitir o filtro: a suíte antiga inclui treino/predição sintéticos.
+
+Os ambientes de treino e figuras foram reconstruídos em venvs temporárias com Python 3.13.7 e locks exatos; pip check/importações passaram e os sete modelos puderam ser desserializados sem previsão. Isso não retesta o experimento integral. Evidências e comandos: [saneamento final](reports/saneamento_tecnico_final.md).
+
+Backup executável: `python -B scripts/backup_project.py --destination "UNIDADE_EXTERNA_AUTORIZADA/BackupDataMind" --authorized-destination`. Substituir somente por diretório existente, privado e autorizado em outro disco físico. O comando recusa o mesmo disco, preserva cópias anteriores, verifica hashes e restaura arquivos críticos em área da própria cópia. Nenhum destino externo está disponível/autorizado nesta inspeção; backup real continua pendente.
+
 Para consultar, abra Markdown, JSON, CSV e figuras existentes **sem executar scripts**. Fonte numérica: reports/phase6/final001/metrics.json. Sensibilidade/especificidade com limiares congelados estão em overall/strata e bootstrap.binary_frozen_thresholds; campos legados primary/paired e bootstrap.metrics usam 0,5.
 
 Duas verificações inspecionadas como somente leitura, executadas da raiz com Python: `python -B scripts/verify.py` e `python -B scripts/fase5_freeze.py --check`. Elas verificam referências específicas; não validam clinicamente o estudo nem reproduzem treinamento.

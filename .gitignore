@@ -24,6 +24,9 @@ __pycache__/
 /reports/hardware.json
 /reports/runtime.json
 /reports/mapa_repositorio.md
+# Unreviewed JSON outputs can contain record-level details. Already tracked,
+# explicitly audited manifests/configs/aggregates remain tracked unchanged.
+/reports/**/*.json
 # Credentials must never be picked up by routine staging.
 .env
 .env.*
