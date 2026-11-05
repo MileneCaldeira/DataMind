@@ -4,3 +4,29 @@ __pycache__/
 .venv/
 *.pyc
 .venv-phase5/
+
+# Local-only research assets; ignoring is not permission to delete.
+/data/
+/.venv*/
+*.joblib
+*.npy
+*.zip
+/reports/**/models/
+/reports/**/*.csv
+/reports/**/sources/
+/artigo/figuras/*.png
+/artigo/figuras/*.pdf
+/artigo/figuras/*.svg
+# Machine/user paths, individual-level outputs and run logs stay in backup.
+/reports/**/environment.json
+/reports/**/*.jsonl
+/reports/**/*.log
+/reports/hardware.json
+/reports/runtime.json
+/reports/mapa_repositorio.md
+# Credentials must never be picked up by routine staging.
+.env
+.env.*
+!.env.example
+*.pem
+*.key

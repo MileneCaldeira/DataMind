@@ -1,0 +1,72 @@
+{
+  "E1": {
+    "C": 0.01,
+    "fit": {
+      "n": 8874,
+      "patients": 8175,
+      "positive": 212,
+      "id_hash": "c0d83a1e39b3d8bd99ab7d52a8a4116d314fe7d554a2508e49ac12907dab8fea",
+      "iterations": 37,
+      "empty_columns": [],
+      "constant_columns": 2,
+      "warnings": []
+    },
+    "apparent_train_brier": 0.004768868439807271
+  },
+  "E2-C": {
+    "C": 10.0,
+    "fit": {
+      "n": 8874,
+      "patients": 8175,
+      "positive": 212,
+      "id_hash": "c0d83a1e39b3d8bd99ab7d52a8a4116d314fe7d554a2508e49ac12907dab8fea",
+      "iterations": 15,
+      "empty_columns": [],
+      "constant_columns": 0,
+      "warnings": []
+    },
+    "apparent_train_brier": 0.007997302227027657
+  },
+  "E2": {
+    "C": 10.0,
+    "fit": {
+      "n": 17417,
+      "patients": 15022,
+      "positive": 432,
+      "id_hash": "55919f662b8ee12cac44d4c23f7a3f104a1090342163145f647bfe64481ead31",
+      "iterations": 19,
+      "empty_columns": [],
+      "constant_columns": 0,
+      "warnings": []
+    },
+    "apparent_train_brier": 0.007654957602988794
+  },
+  "E3": {
+    "C": 0.01,
+    "fit": {
+      "n": 17418,
+      "patients": 15023,
+      "positive": 432,
+      "id_hash": "8e8d70e27ff4126dee69b6cd6d4a21c782ee514d59ed777348e52164509fe90c",
+      "iterations": 48,
+      "empty_columns": [],
+      "constant_columns": 2,
+      "warnings": []
+    },
+    "apparent_train_brier": 0.004877569866633102
+  },
+  "E3-I": {
+    "C": 0.01,
+    "fit": {
+      "n": 17418,
+      "patients": 15023,
+      "positive": 432,
+      "id_hash": "8e8d70e27ff4126dee69b6cd6d4a21c782ee514d59ed777348e52164509fe90c",
+      "iterations": 61,
+      "empty_columns": [],
+      "constant_columns": 413,
+      "warnings": []
+    },
+    "apparent_train_brier": 0.004862168886276922
+  }
+}

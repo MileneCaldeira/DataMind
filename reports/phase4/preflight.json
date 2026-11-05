@@ -1,0 +1,60 @@
+{
+  "source_hashes": 17,
+  "partitions": {
+    "train": {
+      "exams": 17418,
+      "patients": 15023,
+      "positive": 432,
+      "positive_patients": 370,
+      "complete531": 8874,
+      "complete8": 17417,
+      "complete531_positive": 212,
+      "complete8_positive": 432,
+      "CRBBB_likelihoods": {
+        "100.0": 428,
+        "80.0": 1,
+        "50.0": 2,
+        "30.0": 1
+      }
+    },
+    "validation": {
+      "exams": 2183,
+      "patients": 1942,
+      "positive": 55,
+      "positive_patients": 49,
+      "complete531": 1137,
+      "complete8": 2183,
+      "complete531_positive": 22,
+      "complete8_positive": 55,
+      "CRBBB_likelihoods": {
+        "100.0": 54,
+        "50.0": 1
+      }
+    },
+    "test": {
+      "exams": 2198,
+      "patients": 1904,
+      "positive": 54,
+      "positive_patients": 45,
+      "complete531": 1088,
+      "complete8": 2198,
+      "complete531_positive": 35,
+      "complete8_positive": 54,
+      "CRBBB_likelihoods": {
+        "100.0": 54
+      }
+    }
+  },
+  "numeric_invalid_cells": 0,
+  "feature_count": 531,
+  "panel": [
+    "QRS_Dur_Global",
+    "RR_Mean_Global",
+    "QRS_Dur_V1",
+    "R_Amp_V1",
+    "S_Amp_V1",
+    "QRS_Dur_V6",
+    "R_Amp_V6",
+    "S_Amp_V6"
+  ]
+}

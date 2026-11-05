@@ -1,0 +1,36 @@
+{
+  "seed": 20261104,
+  "train_folds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "validation_fold": 9,
+  "forbidden_predict_folds": [
+    10
+  ],
+  "C_grid": [
+    0.01,
+    0.1,
+    1,
+    10
+  ],
+  "fixed_C": 1,
+  "tie_tolerance": 1e-06,
+  "max_iter": 3000,
+  "tol": 1e-06,
+  "solver": "lbfgs",
+  "class_weight": null,
+  "bootstrap": 2000,
+  "threads": 1,
+  "threshold_fixed": 0.5,
+  "target_specificity": 0.95,
+  "output": "reports/phase5/run001",
+  "primary": "E3_minus_E2-fallback_Brier_same_population",
+  "phase": "pilot_only"
+}

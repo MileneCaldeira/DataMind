@@ -1,0 +1,2914 @@
+{
+  "primary": {
+    "n": 2198,
+    "patients": 1904,
+    "positive": 54,
+    "delta_brier": -0.0006129320876249411,
+    "E3": {
+      "brier": 0.006041723350567559,
+      "roc_auc": 0.9976247236042013,
+      "average_precision": 0.9091189400127884,
+      "mean_probability": 0.024420834051800608,
+      "prevalence": 0.02456778889899909,
+      "calibration_mean_error": -0.0001469548471984833,
+      "sensitivity": 0.8148148148148148,
+      "specificity": 0.9967350746268657
+    },
+    "E2-fallback": {
+      "brier": 0.006654655438192499,
+      "roc_auc": 0.9971410309563294,
+      "average_precision": 0.8628645776563949,
+      "mean_probability": 0.023867177622287683,
+      "prevalence": 0.02456778889899909,
+      "calibration_mean_error": -0.0007006112767114055,
+      "sensitivity": 0.7407407407407407,
+      "specificity": 0.9958022388059702
+    },
+    "CI95": {
+      "low": -0.002380012257832108,
+      "high": 0.0011330219950107495,
+      "valid_replicates": 2000
+    },
+    "directional_hypothesis_supported": false
+  },
+  "overall": {
+    "B0": {
+      "n": 2198,
+      "patients": 1904,
+      "positive": 54,
+      "coverage": 1.0,
+      "positive_coverage": 1.0,
+      "brier": 0.02396426746921844,
+      "roc_auc": 0.5,
+      "average_precision": 0.02456778889899909,
+      "mean_probability": 0.02480192903892525,
+      "prevalence": 0.02456778889899909,
+      "calibration_mean_error": 0.0002341401399261525,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "calibration": {
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.02,
+            "n": 0,
+            "positive": 0,
+            "mean_p": null,
+            "observed": null
+          },
+          {
+            "lower": 0.02,
+            "upper": 0.05,
+            "n": 2198,
+            "positive": 54,
+            "mean_p": 0.02480192903892525,
+            "observed": 0.02456778889899909
+          },
+          {
+            "lower": 0.05,
+            "upper": 0.1,
+            "n": 0,
+            "positive": 0,
+            "mean_p": null,
+            "observed": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "positive": 0,
+            "mean_p": null,
+            "observed": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 1,
+            "n": 0,
+            "positive": 0,
+            "mean_p": null,
+            "observed": null
+          }
+        ],
+        "intercept": null,
+        "slope": null,
+        "status": "constant_score_or_single_class"
+      },
+      "patient_equal_weight": {
+        "brier": 0.022827650555656748,
+        "roc_auc": 0.5,
+        "average_precision": 0.023371848739495833,
+        "mean_probability": 0.02480192903892525,
+        "prevalence": 0.0233718487394958,
+        "calibration_mean_error": 0.0014300802994294457,
+        "sensitivity": 0.0,
+        "specificity": 1.0
+      },
+      "fixed_05_diagnostic": {
+        "sensitivity": 0.0,
+        "specificity": 1.0
+      },
+      "threshold_from_fold9": 0.024801929038925252
+    },
+    "E1": {
+      "n": 1088,
+      "patients": 1021,
+      "positive": 35,
+      "coverage": 0.49499545040946313,
+      "positive_coverage": 0.6481481481481481,
+      "brier": 0.005830089932027656,
+      "roc_auc": 0.9986161986161987,
+      "average_precision": 0.9533596630313388,
+      "mean_probability": 0.029579276057863115,
+      "prevalence": 0.03216911764705882,
+      "calibration_mean_error": -0.0025898415891957086,
+      "sensitivity": 1.0,
+      "specificity": 0.9591642924976258,
+      "calibration": {
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.02,
+            "n": 1015,
+            "positive": 0,
+            "mean_p": 0.0021322145160786454,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.02,
+            "upper": 0.05,
+            "n": 18,
+            "positive": 0,
+            "mean_p": 0.026973088901499513,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.05,
+            "upper": 0.1,
+            "n": 10,
+            "positive": 0,
+            "mean_p": 0.06846113821794689,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 6,
+            "positive": 2,
+            "mean_p": 0.14534667826852032,
+            "observed": 0.3333333333333333
+          },
+          {
+            "lower": 0.2,
+            "upper": 1,
+            "n": 39,
+            "positive": 33,
+            "mean_p": 0.7173294247466067,
+            "observed": 0.8461538461538461
+          }
+        ],
+        "intercept": 0.9482177562052855,
+        "slope": 1.5768647769504116,
+        "status": "Optimization terminated successfully."
+      },
+      "patient_equal_weight": {
+        "brier": 0.005751510951491674,
+        "roc_auc": 0.9986180187188123,
+        "average_precision": 0.9473736138827425,
+        "mean_probability": 0.02711904811749932,
+        "prevalence": 0.029872673849167482,
+        "calibration_mean_error": -0.0027536257316681636,
+        "sensitivity": 1.0,
+        "specificity": 0.9611307420494699
+      },
+      "fixed_05_diagnostic": {
+        "sensitivity": 0.8285714285714286,
+        "specificity": 0.9971509971509972
+      },
+      "threshold_from_fold9": 0.01809937133204246
+    },
+    "E2-C": {
+      "n": 2198,
+      "patients": 1904,
+      "positive": 54,
+      "coverage": 1.0,
+      "positive_coverage": 1.0,
+      "brier": 0.007051610172412347,
+      "roc_auc": 0.9969941956882256,
+      "average_precision": 0.8634929308486918,
+      "mean_probability": 0.022619689686215243,
+      "prevalence": 0.02456778889899909,
+      "calibration_mean_error": -0.0019480992127838452,
+      "sensitivity": 1.0,
+      "specificity": 0.9566231343283582,
+      "calibration": {
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.02,
+            "n": 2089,
+            "positive": 0,
+            "mean_p": 0.0018131066832569487,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.02,
+            "upper": 0.05,
+            "n": 25,
+            "positive": 1,
+            "mean_p": 0.03128577985867099,
+            "observed": 0.04
+          },
+          {
+            "lower": 0.05,
+            "upper": 0.1,
+            "n": 8,
+            "positive": 1,
+            "mean_p": 0.07521749999633943,
+            "observed": 0.125
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 6,
+            "positive": 0,
+            "mean_p": 0.12127678502147902,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.2,
+            "upper": 1,
+            "n": 70,
+            "positive": 52,
+            "mean_p": 0.6259850408915856,
+            "observed": 0.7428571428571429
+          }
+        ],
+        "intercept": 0.5462601204639811,
+        "slope": 1.3055643091862714,
+        "status": "Optimization terminated successfully."
+      },
+      "patient_equal_weight": {
+        "brier": 0.007227642041614744,
+        "roc_auc": 0.9967692978560344,
+        "average_precision": 0.843202290299454,
+        "mean_probability": 0.021149626058025388,
+        "prevalence": 0.0233718487394958,
+        "calibration_mean_error": -0.002222222681470412,
+        "sensitivity": 1.0,
+        "specificity": 0.9567984225150129
+      },
+      "fixed_05_diagnostic": {
+        "sensitivity": 0.7407407407407407,
+        "specificity": 0.996268656716418
+      },
+      "threshold_from_fold9": 0.012045715319368731
+    },
+    "E2": {
+      "n": 2198,
+      "patients": 1904,
+      "positive": 54,
+      "coverage": 1.0,
+      "positive_coverage": 1.0,
+      "brier": 0.006654655438192499,
+      "roc_auc": 0.9971410309563294,
+      "average_precision": 0.8628645776563949,
+      "mean_probability": 0.023867177622287683,
+      "prevalence": 0.02456778889899909,
+      "calibration_mean_error": -0.0007006112767114055,
+      "sensitivity": 1.0,
+      "specificity": 0.9542910447761194,
+      "calibration": {
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.02,
+            "n": 2093,
+            "positive": 0,
+            "mean_p": 0.001655408780931664,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.02,
+            "upper": 0.05,
+            "n": 20,
+            "positive": 0,
+            "mean_p": 0.02936693062751921,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.05,
+            "upper": 0.1,
+            "n": 8,
+            "positive": 1,
+            "mean_p": 0.07292539415964655,
+            "observed": 0.125
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 7,
+            "positive": 1,
+            "mean_p": 0.15119513614899988,
+            "observed": 0.14285714285714285
+          },
+          {
+            "lower": 0.2,
+            "upper": 1,
+            "n": 70,
+            "positive": 52,
+            "mean_p": 0.6680882588061114,
+            "observed": 0.7428571428571429
+          }
+        ],
+        "intercept": 0.29352335088275366,
+        "slope": 1.2738481165492668,
+        "status": "Optimization terminated successfully."
+      },
+      "patient_equal_weight": {
+        "brier": 0.006736831289836874,
+        "roc_auc": 0.9969958901198723,
+        "average_precision": 0.8450284189264456,
+        "mean_probability": 0.0225027852997688,
+        "prevalence": 0.0233718487394958,
+        "calibration_mean_error": -0.0008690634397269999,
+        "sensitivity": 1.0,
+        "specificity": 0.9542887873084163
+      },
+      "fixed_05_diagnostic": {
+        "sensitivity": 0.7407407407407407,
+        "specificity": 0.9958022388059702
+      },
+      "threshold_from_fold9": 0.010314007315369404
+    },
+    "E3": {
+      "n": 2198,
+      "patients": 1904,
+      "positive": 54,
+      "coverage": 1.0,
+      "positive_coverage": 1.0,
+      "brier": 0.006041723350567559,
+      "roc_auc": 0.9976247236042013,
+      "average_precision": 0.9091189400127884,
+      "mean_probability": 0.024420834051800608,
+      "prevalence": 0.02456778889899909,
+      "calibration_mean_error": -0.0001469548471984833,
+      "sensitivity": 1.0,
+      "specificity": 0.960820895522388,
+      "calibration": {
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.02,
+            "n": 2080,
+            "positive": 0,
+            "mean_p": 0.0016025980457835547,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.02,
+            "upper": 0.05,
+            "n": 31,
+            "positive": 1,
+            "mean_p": 0.030794911575530146,
+            "observed": 0.03225806451612903
+          },
+          {
+            "lower": 0.05,
+            "upper": 0.1,
+            "n": 10,
+            "positive": 1,
+            "mean_p": 0.07370134040103707,
+            "observed": 0.1
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 9,
+            "positive": 2,
+            "mean_p": 0.12013957954257898,
+            "observed": 0.2222222222222222
+          },
+          {
+            "lower": 0.2,
+            "upper": 1,
+            "n": 68,
+            "positive": 50,
+            "mean_p": 0.6995687857631312,
+            "observed": 0.7352941176470589
+          }
+        ],
+        "intercept": 0.223736417923479,
+        "slope": 1.2349434819945984,
+        "status": "Optimization terminated successfully."
+      },
+      "patient_equal_weight": {
+        "brier": 0.00643607927321651,
+        "roc_auc": 0.9972466522251864,
+        "average_precision": 0.8891058440003782,
+        "mean_probability": 0.022941317804621286,
+        "prevalence": 0.0233718487394958,
+        "calibration_mean_error": -0.00043053093487451194,
+        "sensitivity": 1.0,
+        "specificity": 0.9623554719010486
+      },
+      "fixed_05_diagnostic": {
+        "sensitivity": 0.8148148148148148,
+        "specificity": 0.9967350746268657
+      },
+      "threshold_from_fold9": 0.01381882436059128
+    },
+    "E3-I": {
+      "n": 2198,
+      "patients": 1904,
+      "positive": 54,
+      "coverage": 1.0,
+      "positive_coverage": 1.0,
+      "brier": 0.0060889834063565795,
+      "roc_auc": 0.9976074488667772,
+      "average_precision": 0.908264756037648,
+      "mean_probability": 0.024446174341298334,
+      "prevalence": 0.02456778889899909,
+      "calibration_mean_error": -0.00012161455770075727,
+      "sensitivity": 1.0,
+      "specificity": 0.9626865671641791,
+      "calibration": {
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.02,
+            "n": 2080,
+            "positive": 0,
+            "mean_p": 0.0015968249342415218,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.02,
+            "upper": 0.05,
+            "n": 31,
+            "positive": 1,
+            "mean_p": 0.03095866031746854,
+            "observed": 0.03225806451612903
+          },
+          {
+            "lower": 0.05,
+            "upper": 0.1,
+            "n": 10,
+            "positive": 1,
+            "mean_p": 0.07201269015971488,
+            "observed": 0.1
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 8,
+            "positive": 2,
+            "mean_p": 0.11384433645871989,
+            "observed": 0.25
+          },
+          {
+            "lower": 0.2,
+            "upper": 1,
+            "n": 69,
+            "positive": 50,
+            "mean_p": 0.6930535547223614,
+            "observed": 0.7246376811594203
+          }
+        ],
+        "intercept": 0.21425379675554498,
+        "slope": 1.2280044808252177,
+        "status": "Optimization terminated successfully."
+      },
+      "patient_equal_weight": {
+        "brier": 0.006482549651481831,
+        "roc_auc": 0.9972255036138948,
+        "average_precision": 0.8879546837296848,
+        "mean_probability": 0.022947774455482142,
+        "prevalence": 0.0233718487394958,
+        "calibration_mean_error": -0.0004240742840136582,
+        "sensitivity": 1.0,
+        "specificity": 0.9642376983059963
+      },
+      "fixed_05_diagnostic": {
+        "sensitivity": 0.8148148148148148,
+        "specificity": 0.996268656716418
+      },
+      "threshold_from_fold9": 0.014096148466322622
+    },
+    "E1_C1": {
+      "n": 1088,
+      "patients": 1021,
+      "positive": 35,
+      "coverage": 0.49499545040946313,
+      "positive_coverage": 0.6481481481481481,
+      "brier": 0.0097326182820002,
+      "roc_auc": 0.9962284628951296,
+      "average_precision": 0.9082448845095328,
+      "mean_probability": 0.032027527960950535,
+      "prevalence": 0.03216911764705882,
+      "calibration_mean_error": -0.00014158968610828953,
+      "sensitivity": 1.0,
+      "specificity": 0.949667616334283,
+      "calibration": {
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.02,
+            "n": 1041,
+            "positive": 3,
+            "mean_p": 8.359199778347309e-05,
+            "observed": 0.002881844380403458
+          },
+          {
+            "lower": 0.02,
+            "upper": 0.05,
+            "n": 5,
+            "positive": 1,
+            "mean_p": 0.034562709534592485,
+            "observed": 0.2
+          },
+          {
+            "lower": 0.05,
+            "upper": 0.1,
+            "n": 3,
+            "positive": 0,
+            "mean_p": 0.07011992271091348,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 1,
+            "positive": 1,
+            "mean_p": 0.10485691923330981,
+            "observed": 1.0
+          },
+          {
+            "lower": 0.2,
+            "upper": 1,
+            "n": 38,
+            "positive": 30,
+            "mean_p": 0.9018658135995414,
+            "observed": 0.7894736842105263
+          }
+        ],
+        "intercept": -0.30347208575085227,
+        "slope": 0.48364601480621655,
+        "status": "Optimization terminated successfully."
+      },
+      "patient_equal_weight": {
+        "brier": 0.008923609272442047,
+        "roc_auc": 0.9964002283993015,
+        "average_precision": 0.9101674559775219,
+        "mean_probability": 0.02995247288723389,
+        "prevalence": 0.029872673849167482,
+        "calibration_mean_error": 7.97990380664093e-05,
+        "sensitivity": 1.0,
+        "specificity": 0.9501935049638229
+      },
+      "fixed_05_diagnostic": {
+        "sensitivity": 0.8285714285714286,
+        "specificity": 0.9943019943019943
+      },
+      "threshold_from_fold9": 0.00014499959107455056
+    },
+    "E2-C_C1": {
+      "n": 2198,
+      "patients": 1904,
+      "positive": 54,
+      "coverage": 1.0,
+      "positive_coverage": 1.0,
+      "brier": 0.007070740660967036,
+      "roc_auc": 0.9970201077943615,
+      "average_precision": 0.8644124260099811,
+      "mean_probability": 0.02260387980127767,
+      "prevalence": 0.02456778889899909,
+      "calibration_mean_error": -0.001963909097721422,
+      "sensitivity": 1.0,
+      "specificity": 0.9575559701492538,
+      "calibration": {
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.02,
+            "n": 2088,
+            "positive": 0,
+            "mean_p": 0.00188276665467723,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.02,
+            "upper": 0.05,
+            "n": 26,
+            "positive": 1,
+            "mean_p": 0.03174144232999189,
+            "observed": 0.038461538461538464
+          },
+          {
+            "lower": 0.05,
+            "upper": 0.1,
+            "n": 8,
+            "positive": 1,
+            "mean_p": 0.07584748769913847,
+            "observed": 0.125
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 6,
+            "positive": 0,
+            "mean_p": 0.1217858054310489,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.2,
+            "upper": 1,
+            "n": 70,
+            "positive": 52,
+            "mean_p": 0.622704839906901,
+            "observed": 0.7428571428571429
+          }
+        ],
+        "intercept": 0.5645544860184436,
+        "slope": 1.3175392065174036,
+        "status": "Optimization terminated successfully."
+      },
+      "patient_equal_weight": {
+        "brier": 0.007252370676867062,
+        "roc_auc": 0.996796488927695,
+        "average_precision": 0.8441125933740057,
+        "mean_probability": 0.02113460103984521,
+        "prevalence": 0.0233718487394958,
+        "calibration_mean_error": -0.0022372476996505896,
+        "sensitivity": 1.0,
+        "specificity": 0.9578739804606973
+      },
+      "fixed_05_diagnostic": {
+        "sensitivity": 0.7407407407407407,
+        "specificity": 0.996268656716418
+      },
+      "threshold_from_fold9": 0.012544461589038068
+    },
+    "E2-fallback": {
+      "n": 2198,
+      "patients": 1904,
+      "positive": 54,
+      "coverage": 1.0,
+      "positive_coverage": 1.0,
+      "brier": 0.006654655438192499,
+      "roc_auc": 0.9971410309563294,
+      "average_precision": 0.8628645776563949,
+      "mean_probability": 0.023867177622287683,
+      "prevalence": 0.02456778889899909,
+      "calibration_mean_error": -0.0007006112767114055,
+      "sensitivity": 1.0,
+      "specificity": 0.9542910447761194,
+      "calibration": {
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.02,
+            "n": 2093,
+            "positive": 0,
+            "mean_p": 0.001655408780931664,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.02,
+            "upper": 0.05,
+            "n": 20,
+            "positive": 0,
+            "mean_p": 0.02936693062751921,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.05,
+            "upper": 0.1,
+            "n": 8,
+            "positive": 1,
+            "mean_p": 0.07292539415964655,
+            "observed": 0.125
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 7,
+            "positive": 1,
+            "mean_p": 0.15119513614899988,
+            "observed": 0.14285714285714285
+          },
+          {
+            "lower": 0.2,
+            "upper": 1,
+            "n": 70,
+            "positive": 52,
+            "mean_p": 0.6680882588061114,
+            "observed": 0.7428571428571429
+          }
+        ],
+        "intercept": 0.29352335088275366,
+        "slope": 1.2738481165492668,
+        "status": "Optimization terminated successfully."
+      },
+      "patient_equal_weight": {
+        "brier": 0.006736831289836874,
+        "roc_auc": 0.9969958901198723,
+        "average_precision": 0.8450284189264456,
+        "mean_probability": 0.0225027852997688,
+        "prevalence": 0.0233718487394958,
+        "calibration_mean_error": -0.0008690634397269999,
+        "sensitivity": 1.0,
+        "specificity": 0.9542887873084163
+      },
+      "fixed_05_diagnostic": {
+        "sensitivity": 0.7407407407407407,
+        "specificity": 0.9958022388059702
+      },
+      "threshold_from_fold9": 0.010314007315369404
+    },
+    "Hybrid": {
+      "n": 2198,
+      "patients": 1904,
+      "positive": 54,
+      "coverage": 1.0,
+      "positive_coverage": 1.0,
+      "brier": 0.005383916246210964,
+      "roc_auc": 0.998151603095633,
+      "average_precision": 0.9096517227441218,
+      "mean_probability": 0.024019110667477268,
+      "prevalence": 0.02456778889899909,
+      "calibration_mean_error": -0.00054867823152182,
+      "sensitivity": 1.0,
+      "specificity": 0.9612873134328358,
+      "calibration": {
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.02,
+            "n": 2077,
+            "positive": 0,
+            "mean_p": 0.00187984852302998,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.02,
+            "upper": 0.05,
+            "n": 32,
+            "positive": 0,
+            "mean_p": 0.02727392160784363,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.05,
+            "upper": 0.1,
+            "n": 14,
+            "positive": 0,
+            "mean_p": 0.06844364997409498,
+            "observed": 0.0
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 8,
+            "positive": 2,
+            "mean_p": 0.14906806563917124,
+            "observed": 0.25
+          },
+          {
+            "lower": 0.2,
+            "upper": 1,
+            "n": 67,
+            "positive": 52,
+            "mean_p": 0.6845677425161204,
+            "observed": 0.7761194029850746
+          }
+        ],
+        "intercept": 0.4271477291978007,
+        "slope": 1.4560936408449416,
+        "status": "Optimization terminated successfully."
+      },
+      "patient_equal_weight": {
+        "brier": 0.005699184428343444,
+        "roc_auc": 0.9978539194922722,
+        "average_precision": 0.8885435270860398,
+        "mean_probability": 0.022882693349633484,
+        "prevalence": 0.0233718487394958,
+        "calibration_mean_error": -0.0004891553898623155,
+        "sensitivity": 1.0,
+        "specificity": 0.9620686564488662
+      },
+      "fixed_05_diagnostic": {
+        "sensitivity": 0.8148148148148148,
+        "specificity": 0.9967350746268657
+      },
+      "threshold_from_fold9": 0.014731311395222903
+    }
+  },
+  "strata": {
+    "complete": {
+      "B0": {
+        "n": 1088,
+        "patients": 1021,
+        "positive": 35,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.03118854098485633,
+        "roc_auc": 0.5,
+        "average_precision": 0.03216911764705882,
+        "mean_probability": 0.02480192903892525,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.007367188608133583,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 0,
+              "positive": 0,
+              "mean_p": null,
+              "observed": null
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 1088,
+              "positive": 35,
+              "mean_p": 0.02480192903892525,
+              "observed": 0.03216911764705882
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 0,
+              "positive": 0,
+              "mean_p": null,
+              "observed": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 0,
+              "positive": 0,
+              "mean_p": null,
+              "observed": null
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 0,
+              "positive": 0,
+              "mean_p": null,
+              "observed": null
+            }
+          ],
+          "intercept": null,
+          "slope": null,
+          "status": "constant_score_or_single_class"
+        },
+        "patient_equal_weight": {
+          "brier": 0.029006009659199354,
+          "roc_auc": 0.5,
+          "average_precision": 0.029872673849167468,
+          "mean_probability": 0.024801929038925245,
+          "prevalence": 0.029872673849167482,
+          "calibration_mean_error": -0.005070744810242239,
+          "sensitivity": 0.0,
+          "specificity": 1.0
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.0,
+          "specificity": 1.0
+        },
+        "threshold_from_fold9": 0.024801929038925252
+      },
+      "E1": {
+        "n": 1088,
+        "patients": 1021,
+        "positive": 35,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.005830089932027656,
+        "roc_auc": 0.9986161986161987,
+        "average_precision": 0.9533596630313388,
+        "mean_probability": 0.029579276057863115,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.0025898415891957086,
+        "sensitivity": 1.0,
+        "specificity": 0.9591642924976258,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1015,
+              "positive": 0,
+              "mean_p": 0.0021322145160786454,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 18,
+              "positive": 0,
+              "mean_p": 0.026973088901499513,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 10,
+              "positive": 0,
+              "mean_p": 0.06846113821794689,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 6,
+              "positive": 2,
+              "mean_p": 0.14534667826852032,
+              "observed": 0.3333333333333333
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 39,
+              "positive": 33,
+              "mean_p": 0.7173294247466067,
+              "observed": 0.8461538461538461
+            }
+          ],
+          "intercept": 0.9482177562052855,
+          "slope": 1.5768647769504116,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.005751510951491674,
+          "roc_auc": 0.9986180187188123,
+          "average_precision": 0.9473736138827425,
+          "mean_probability": 0.02711904811749932,
+          "prevalence": 0.029872673849167482,
+          "calibration_mean_error": -0.0027536257316681636,
+          "sensitivity": 1.0,
+          "specificity": 0.9611307420494699
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.8285714285714286,
+          "specificity": 0.9971509971509972
+        },
+        "threshold_from_fold9": 0.01809937133204246
+      },
+      "E2-C": {
+        "n": 1088,
+        "patients": 1021,
+        "positive": 35,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.009239573601396534,
+        "roc_auc": 0.9965540632207299,
+        "average_precision": 0.8866777055030761,
+        "mean_probability": 0.02756248810863339,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.0046066295384254346,
+        "sensitivity": 1.0,
+        "specificity": 0.956315289648623,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1028,
+              "positive": 0,
+              "mean_p": 0.0018121997784931437,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 11,
+              "positive": 1,
+              "mean_p": 0.03375312910688789,
+              "observed": 0.09090909090909091
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 3,
+              "positive": 1,
+              "mean_p": 0.06704759205044764,
+              "observed": 0.3333333333333333
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 4,
+              "positive": 0,
+              "mean_p": 0.11391618864104898,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 42,
+              "positive": 33,
+              "mean_p": 0.6451655652145445,
+              "observed": 0.7857142857142857
+            }
+          ],
+          "intercept": 0.7891093072702563,
+          "slope": 1.2267465810623899,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.0088472979618428,
+          "roc_auc": 0.9968719226090483,
+          "average_precision": 0.8857551845669962,
+          "mean_probability": 0.024509433922335757,
+          "prevalence": 0.029872673849167482,
+          "calibration_mean_error": -0.005363239926831725,
+          "sensitivity": 1.0,
+          "specificity": 0.9569241124011442
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.7142857142857143,
+          "specificity": 0.9952516619183286
+        },
+        "threshold_from_fold9": 0.012045715319368731
+      },
+      "E2": {
+        "n": 1088,
+        "patients": 1021,
+        "positive": 35,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.008397263409946239,
+        "roc_auc": 0.9968525301858635,
+        "average_precision": 0.8908520211748228,
+        "mean_probability": 0.02927233779193783,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.002896779855120993,
+        "sensitivity": 1.0,
+        "specificity": 0.9534662867996201,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1031,
+              "positive": 0,
+              "mean_p": 0.0016726701551663715,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 6,
+              "positive": 0,
+              "mean_p": 0.03334812022106321,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 4,
+              "positive": 1,
+              "mean_p": 0.07745085895482795,
+              "observed": 0.25
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 5,
+              "positive": 1,
+              "mean_p": 0.14758029950815024,
+              "observed": 0.2
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 42,
+              "positive": 33,
+              "mean_p": 0.6875234984039378,
+              "observed": 0.7857142857142857
+            }
+          ],
+          "intercept": 0.5440541692357534,
+          "slope": 1.2246711270117778,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.007834043432943099,
+          "roc_auc": 0.9972194867635984,
+          "average_precision": 0.8903804168953241,
+          "mean_probability": 0.026200427209017697,
+          "prevalence": 0.029872673849167482,
+          "calibration_mean_error": -0.0036722466401497844,
+          "sensitivity": 1.0,
+          "specificity": 0.9545683997980817
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.7142857142857143,
+          "specificity": 0.9952516619183286
+        },
+        "threshold_from_fold9": 0.010314007315369404
+      },
+      "E3": {
+        "n": 1088,
+        "patients": 1021,
+        "positive": 35,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.005856369865945077,
+        "roc_auc": 0.9982905982905983,
+        "average_precision": 0.9429161729909183,
+        "mean_probability": 0.03030013144966571,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.0018689861973931138,
+        "sensitivity": 1.0,
+        "specificity": 0.9686609686609686,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1023,
+              "positive": 0,
+              "mean_p": 0.001399293372909466,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 15,
+              "positive": 0,
+              "mean_p": 0.03134363944885917,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 5,
+              "positive": 1,
+              "mean_p": 0.07601636938370342,
+              "observed": 0.2
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 4,
+              "positive": 0,
+              "mean_p": 0.11878716708560563,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 41,
+              "positive": 34,
+              "mean_p": 0.7368214826769776,
+              "observed": 0.8292682926829268
+            }
+          ],
+          "intercept": 0.482874757061187,
+          "slope": 1.3528953372699928,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.005578581698867499,
+          "roc_auc": 0.9983587248257352,
+          "average_precision": 0.9402952221404687,
+          "mean_probability": 0.02794993465742433,
+          "prevalence": 0.029872673849167482,
+          "calibration_mean_error": -0.0019227391917431566,
+          "sensitivity": 1.0,
+          "specificity": 0.9687026754164564
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.8571428571428571,
+          "specificity": 0.9971509971509972
+        },
+        "threshold_from_fold9": 0.01381882436059128
+      },
+      "E3-I": {
+        "n": 1088,
+        "patients": 1021,
+        "positive": 35,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.0058807775456862985,
+        "roc_auc": 0.9982634649301315,
+        "average_precision": 0.9422208937308523,
+        "mean_probability": 0.030167159806479948,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.0020019578405788764,
+        "sensitivity": 1.0,
+        "specificity": 0.9696106362773029,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1024,
+              "positive": 0,
+              "mean_p": 0.001386734439245913,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 14,
+              "positive": 0,
+              "mean_p": 0.031834445495940604,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 5,
+              "positive": 1,
+              "mean_p": 0.07497759657190375,
+              "observed": 0.2
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 4,
+              "positive": 0,
+              "mean_p": 0.11846503398849309,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 41,
+              "positive": 34,
+              "mean_p": 0.734327401168432,
+              "observed": 0.8292682926829268
+            }
+          ],
+          "intercept": 0.5024958810700986,
+          "slope": 1.3527696901049155,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.005605606213512687,
+          "roc_auc": 0.9983504494887221,
+          "average_precision": 0.9405327234092381,
+          "mean_probability": 0.027820894027577217,
+          "prevalence": 0.029872673849167482,
+          "calibration_mean_error": -0.002051779821590269,
+          "sensitivity": 1.0,
+          "specificity": 0.9697122665320546
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.8571428571428571,
+          "specificity": 0.9971509971509972
+        },
+        "threshold_from_fold9": 0.014096148466322622
+      },
+      "E1_C1": {
+        "n": 1088,
+        "patients": 1021,
+        "positive": 35,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.0097326182820002,
+        "roc_auc": 0.9962284628951296,
+        "average_precision": 0.9082448845095328,
+        "mean_probability": 0.032027527960950535,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.00014158968610828953,
+        "sensitivity": 1.0,
+        "specificity": 0.949667616334283,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1041,
+              "positive": 3,
+              "mean_p": 8.359199778347309e-05,
+              "observed": 0.002881844380403458
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 5,
+              "positive": 1,
+              "mean_p": 0.034562709534592485,
+              "observed": 0.2
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 3,
+              "positive": 0,
+              "mean_p": 0.07011992271091348,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 1,
+              "positive": 1,
+              "mean_p": 0.10485691923330981,
+              "observed": 1.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 38,
+              "positive": 30,
+              "mean_p": 0.9018658135995414,
+              "observed": 0.7894736842105263
+            }
+          ],
+          "intercept": -0.30347208575085227,
+          "slope": 0.48364601480621655,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.008923609272442047,
+          "roc_auc": 0.9964002283993015,
+          "average_precision": 0.9101674559775219,
+          "mean_probability": 0.02995247288723389,
+          "prevalence": 0.029872673849167482,
+          "calibration_mean_error": 7.97990380664093e-05,
+          "sensitivity": 1.0,
+          "specificity": 0.9501935049638229
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.8285714285714286,
+          "specificity": 0.9943019943019943
+        },
+        "threshold_from_fold9": 0.00014499959107455056
+      },
+      "E2-C_C1": {
+        "n": 1088,
+        "patients": 1021,
+        "positive": 35,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.009267680726846497,
+        "roc_auc": 0.9966083299416633,
+        "average_precision": 0.8884265534293434,
+        "mean_probability": 0.027521884571497096,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.004647233075561728,
+        "sensitivity": 1.0,
+        "specificity": 0.9582146248812915,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1027,
+              "positive": 0,
+              "mean_p": 0.0018720514241736955,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 12,
+              "positive": 1,
+              "mean_p": 0.03341484322924044,
+              "observed": 0.08333333333333333
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 3,
+              "positive": 1,
+              "mean_p": 0.0659389033178693,
+              "observed": 0.3333333333333333
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 4,
+              "positive": 0,
+              "mean_p": 0.11463761511089163,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 42,
+              "positive": 33,
+              "mean_p": 0.6419968645717713,
+              "observed": 0.7857142857142857
+            }
+          ],
+          "intercept": 0.8059832983735247,
+          "slope": 1.237292636568758,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.008888560065833601,
+          "roc_auc": 0.9969132992941138,
+          "average_precision": 0.8871987060079514,
+          "mean_probability": 0.024477279669638124,
+          "prevalence": 0.029872673849167482,
+          "calibration_mean_error": -0.00539539417952936,
+          "sensitivity": 1.0,
+          "specificity": 0.9589432946323405
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.7142857142857143,
+          "specificity": 0.9952516619183286
+        },
+        "threshold_from_fold9": 0.012544461589038068
+      },
+      "E2-fallback": {
+        "n": 1088,
+        "patients": 1021,
+        "positive": 35,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.008397263409946239,
+        "roc_auc": 0.9968525301858635,
+        "average_precision": 0.8908520211748228,
+        "mean_probability": 0.02927233779193783,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.002896779855120993,
+        "sensitivity": 1.0,
+        "specificity": 0.9534662867996201,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1031,
+              "positive": 0,
+              "mean_p": 0.0016726701551663715,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 6,
+              "positive": 0,
+              "mean_p": 0.03334812022106321,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 4,
+              "positive": 1,
+              "mean_p": 0.07745085895482795,
+              "observed": 0.25
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 5,
+              "positive": 1,
+              "mean_p": 0.14758029950815024,
+              "observed": 0.2
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 42,
+              "positive": 33,
+              "mean_p": 0.6875234984039378,
+              "observed": 0.7857142857142857
+            }
+          ],
+          "intercept": 0.5440541692357534,
+          "slope": 1.2246711270117778,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.007834043432943099,
+          "roc_auc": 0.9972194867635984,
+          "average_precision": 0.8903804168953241,
+          "mean_probability": 0.026200427209017697,
+          "prevalence": 0.029872673849167482,
+          "calibration_mean_error": -0.0036722466401497844,
+          "sensitivity": 1.0,
+          "specificity": 0.9545683997980817
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.7142857142857143,
+          "specificity": 0.9952516619183286
+        },
+        "threshold_from_fold9": 0.010314007315369404
+      },
+      "Hybrid": {
+        "n": 1088,
+        "patients": 1021,
+        "positive": 35,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.005830089932027656,
+        "roc_auc": 0.9986161986161987,
+        "average_precision": 0.9533596630313388,
+        "mean_probability": 0.029579276057863115,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.0025898415891957086,
+        "sensitivity": 1.0,
+        "specificity": 0.9515669515669516,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1015,
+              "positive": 0,
+              "mean_p": 0.0021322145160786454,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 18,
+              "positive": 0,
+              "mean_p": 0.026973088901499513,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 10,
+              "positive": 0,
+              "mean_p": 0.06846113821794689,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 6,
+              "positive": 2,
+              "mean_p": 0.14534667826852032,
+              "observed": 0.3333333333333333
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 39,
+              "positive": 33,
+              "mean_p": 0.7173294247466067,
+              "observed": 0.8461538461538461
+            }
+          ],
+          "intercept": 0.9482177562052855,
+          "slope": 1.5768647769504116,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.005751510951491674,
+          "roc_auc": 0.9986180187188123,
+          "average_precision": 0.9473736138827425,
+          "mean_probability": 0.02711904811749932,
+          "prevalence": 0.029872673849167482,
+          "calibration_mean_error": -0.0027536257316681636,
+          "sensitivity": 1.0,
+          "specificity": 0.9535588086824835
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.8285714285714286,
+          "specificity": 0.9971509971509972
+        },
+        "threshold_from_fold9": 0.014731311395222903
+      }
+    },
+    "incomplete": {
+      "B0": {
+        "n": 1110,
+        "patients": 1013,
+        "positive": 19,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.01688317775298958,
+        "roc_auc": 0.5,
+        "average_precision": 0.017117117117117116,
+        "mean_probability": 0.02480192903892525,
+        "prevalence": 0.017117117117117116,
+        "calibration_mean_error": 0.007684811921808128,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 0,
+              "positive": 0,
+              "mean_p": null,
+              "observed": null
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 1110,
+              "positive": 19,
+              "mean_p": 0.02480192903892525,
+              "observed": 0.017117117117117116
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 0,
+              "positive": 0,
+              "mean_p": null,
+              "observed": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 0,
+              "positive": 0,
+              "mean_p": null,
+              "observed": null
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 0,
+              "positive": 0,
+              "mean_p": null,
+              "observed": null
+            }
+          ],
+          "intercept": null,
+          "slope": null,
+          "status": "constant_score_or_single_class"
+        },
+        "patient_equal_weight": {
+          "brier": 0.01656452799666447,
+          "roc_auc": 0.5,
+          "average_precision": 0.016781836130306014,
+          "mean_probability": 0.02480192903892525,
+          "prevalence": 0.01678183613030602,
+          "calibration_mean_error": 0.008020092908619224,
+          "sensitivity": 0.0,
+          "specificity": 1.0
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.0,
+          "specificity": 1.0
+        },
+        "threshold_from_fold9": 0.024801929038925252
+      },
+      "E2-C": {
+        "n": 1110,
+        "patients": 1013,
+        "positive": 19,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.004907011784362981,
+        "roc_auc": 0.9976361618987891,
+        "average_precision": 0.8160164292416279,
+        "mean_probability": 0.017774856637935117,
+        "prevalence": 0.017117117117117116,
+        "calibration_mean_error": 0.000657739520818,
+        "sensitivity": 1.0,
+        "specificity": 0.9569202566452796,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1061,
+              "positive": 0,
+              "mean_p": 0.0018139853808037839,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 14,
+              "positive": 0,
+              "mean_p": 0.029347148306500575,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 5,
+              "positive": 0,
+              "mean_p": 0.08011944476387452,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 2,
+              "positive": 0,
+              "mean_p": 0.13599797778233907,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 28,
+              "positive": 19,
+              "mean_p": 0.5972142544071467,
+              "observed": 0.6785714285714286
+            }
+          ],
+          "intercept": 0.21775103548886496,
+          "slope": 1.542247136868944,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.005084578848845209,
+          "roc_auc": 0.9973718403023859,
+          "average_precision": 0.7896813652266768,
+          "mean_probability": 0.017570700146361966,
+          "prevalence": 0.01678183613030602,
+          "calibration_mean_error": 0.0007888640160559446,
+          "sensitivity": 1.0,
+          "specificity": 0.9579986613119141
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.7894736842105263,
+          "specificity": 0.997250229147571
+        },
+        "threshold_from_fold9": 0.012045715319368731
+      },
+      "E2": {
+        "n": 1110,
+        "patients": 1013,
+        "positive": 19,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.004946585642455503,
+        "roc_auc": 0.9974914371170824,
+        "average_precision": 0.8050214296653926,
+        "mean_probability": 0.01856914675329727,
+        "prevalence": 0.017117117117117116,
+        "calibration_mean_error": 0.0014520296361801531,
+        "sensitivity": 1.0,
+        "specificity": 0.9550870760769936,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1062,
+              "positive": 0,
+              "mean_p": 0.00163865126978667,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 14,
+              "positive": 0,
+              "mean_p": 0.027660706516000343,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 4,
+              "positive": 0,
+              "mean_p": 0.06839992936446515,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 2,
+              "positive": 0,
+              "mean_p": 0.160232227751124,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 28,
+              "positive": 19,
+              "mean_p": 0.638935399409372,
+              "observed": 0.6785714285714286
+            }
+          ],
+          "intercept": -0.05366073253575498,
+          "slope": 1.4009713242262307,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.005142286755443961,
+          "roc_auc": 0.9972537207654146,
+          "average_precision": 0.7819563811098046,
+          "mean_probability": 0.01840590745844775,
+          "prevalence": 0.01678183613030602,
+          "calibration_mean_error": 0.0016240713281417277,
+          "sensitivity": 1.0,
+          "specificity": 0.9564926372155287
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.7894736842105263,
+          "specificity": 0.9963336388634281
+        },
+        "threshold_from_fold9": 0.010314007315369404
+      },
+      "E3": {
+        "n": 1110,
+        "patients": 1013,
+        "positive": 19,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.006223403162521849,
+        "roc_auc": 0.9964301220512326,
+        "average_precision": 0.8443369607095983,
+        "mean_probability": 0.018658063269028326,
+        "prevalence": 0.017117117117117116,
+        "calibration_mean_error": 0.0015409461519112096,
+        "sensitivity": 1.0,
+        "specificity": 0.9532538955087076,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1057,
+              "positive": 0,
+              "mean_p": 0.0017993631170703974,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 16,
+              "positive": 1,
+              "mean_p": 0.030280479194284192,
+              "observed": 0.0625
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 5,
+              "positive": 0,
+              "mean_p": 0.07138631141837073,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 5,
+              "positive": 2,
+              "mean_p": 0.12122150950815766,
+              "observed": 0.4
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 27,
+              "positive": 16,
+              "mean_p": 0.6429998756346978,
+              "observed": 0.5925925925925926
+            }
+          ],
+          "intercept": -0.09892432292224927,
+          "slope": 1.1213446061015755,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.006608453652830906,
+          "roc_auc": 0.9961020552799432,
+          "average_precision": 0.8219244475823424,
+          "mean_probability": 0.017888362783468732,
+          "prevalence": 0.01678183613030602,
+          "calibration_mean_error": 0.0011065266531627095,
+          "sensitivity": 1.0,
+          "specificity": 0.9574966532797856
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.7368421052631579,
+          "specificity": 0.9963336388634281
+        },
+        "threshold_from_fold9": 0.01381882436059128
+      },
+      "E3-I": {
+        "n": 1110,
+        "patients": 1013,
+        "positive": 19,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.006293062664382946,
+        "roc_auc": 0.9964301220512326,
+        "average_precision": 0.8443369607095983,
+        "mean_probability": 0.018838577777228426,
+        "prevalence": 0.017117117117117116,
+        "calibration_mean_error": 0.0017214606601113095,
+        "sensitivity": 1.0,
+        "specificity": 0.9560036663611365,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1056,
+              "positive": 0,
+              "mean_p": 0.0018005490506009005,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 17,
+              "positive": 1,
+              "mean_p": 0.030237425464609197,
+              "observed": 0.058823529411764705
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 5,
+              "positive": 0,
+              "mean_p": 0.06904778374752604,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 4,
+              "positive": 2,
+              "mean_p": 0.10922363892894665,
+              "observed": 0.5
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 28,
+              "positive": 16,
+              "mean_p": 0.6326168509977582,
+              "observed": 0.5714285714285714
+            }
+          ],
+          "intercept": -0.14177004492244635,
+          "slope": 1.1097226470001877,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.006666400301050823,
+          "roc_auc": 0.9961020552799433,
+          "average_precision": 0.8218894335767402,
+          "mean_probability": 0.018045886678889827,
+          "prevalence": 0.01678183613030602,
+          "calibration_mean_error": 0.0012640505485838063,
+          "sensitivity": 1.0,
+          "specificity": 0.9600066934404282
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.7368421052631579,
+          "specificity": 0.995417048579285
+        },
+        "threshold_from_fold9": 0.014096148466322622
+      },
+      "E2-C_C1": {
+        "n": 1110,
+        "patients": 1013,
+        "positive": 19,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.0049173435513482485,
+        "roc_auc": 0.9976361618987891,
+        "average_precision": 0.8160164292416279,
+        "mean_probability": 0.017783348999477006,
+        "prevalence": 0.017117117117117116,
+        "calibration_mean_error": 0.0006662318823598866,
+        "sensitivity": 1.0,
+        "specificity": 0.9569202566452796,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1061,
+              "positive": 0,
+              "mean_p": 0.001893138513043988,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 14,
+              "positive": 0,
+              "mean_p": 0.030307098702064574,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 5,
+              "positive": 0,
+              "mean_p": 0.08179263832789999,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 2,
+              "positive": 0,
+              "mean_p": 0.13608218607136346,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 28,
+              "positive": 19,
+              "mean_p": 0.5937668029095954,
+              "observed": 0.6785714285714286
+            }
+          ],
+          "intercept": 0.2399733508618495,
+          "slope": 1.5578009349526194,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.005094397560881165,
+          "roc_auc": 0.997371840302386,
+          "average_precision": 0.7896813652266768,
+          "mean_probability": 0.017577818686914454,
+          "prevalence": 0.01678183613030602,
+          "calibration_mean_error": 0.0007959825566084311,
+          "sensitivity": 1.0,
+          "specificity": 0.9579986613119141
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.7894736842105263,
+          "specificity": 0.997250229147571
+        },
+        "threshold_from_fold9": 0.012544461589038068
+      },
+      "E2-fallback": {
+        "n": 1110,
+        "patients": 1013,
+        "positive": 19,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.004946585642455503,
+        "roc_auc": 0.9974914371170824,
+        "average_precision": 0.8050214296653926,
+        "mean_probability": 0.01856914675329727,
+        "prevalence": 0.017117117117117116,
+        "calibration_mean_error": 0.0014520296361801531,
+        "sensitivity": 1.0,
+        "specificity": 0.9550870760769936,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1062,
+              "positive": 0,
+              "mean_p": 0.00163865126978667,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 14,
+              "positive": 0,
+              "mean_p": 0.027660706516000343,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 4,
+              "positive": 0,
+              "mean_p": 0.06839992936446515,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 2,
+              "positive": 0,
+              "mean_p": 0.160232227751124,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 28,
+              "positive": 19,
+              "mean_p": 0.638935399409372,
+              "observed": 0.6785714285714286
+            }
+          ],
+          "intercept": -0.05366073253575498,
+          "slope": 1.4009713242262307,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.005142286755443961,
+          "roc_auc": 0.9972537207654146,
+          "average_precision": 0.7819563811098046,
+          "mean_probability": 0.01840590745844775,
+          "prevalence": 0.01678183613030602,
+          "calibration_mean_error": 0.0016240713281417277,
+          "sensitivity": 1.0,
+          "specificity": 0.9564926372155287
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.7894736842105263,
+          "specificity": 0.9963336388634281
+        },
+        "threshold_from_fold9": 0.010314007315369404
+      },
+      "Hybrid": {
+        "n": 1110,
+        "patients": 1013,
+        "positive": 19,
+        "coverage": 1.0,
+        "positive_coverage": 1.0,
+        "brier": 0.004946585642455503,
+        "roc_auc": 0.9974914371170824,
+        "average_precision": 0.8050214296653926,
+        "mean_probability": 0.01856914675329727,
+        "prevalence": 0.017117117117117116,
+        "calibration_mean_error": 0.0014520296361801531,
+        "sensitivity": 1.0,
+        "specificity": 0.9706691109074244,
+        "calibration": {
+          "bins": [
+            {
+              "lower": 0,
+              "upper": 0.02,
+              "n": 1062,
+              "positive": 0,
+              "mean_p": 0.00163865126978667,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.02,
+              "upper": 0.05,
+              "n": 14,
+              "positive": 0,
+              "mean_p": 0.027660706516000343,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.05,
+              "upper": 0.1,
+              "n": 4,
+              "positive": 0,
+              "mean_p": 0.06839992936446515,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 2,
+              "positive": 0,
+              "mean_p": 0.160232227751124,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 1,
+              "n": 28,
+              "positive": 19,
+              "mean_p": 0.638935399409372,
+              "observed": 0.6785714285714286
+            }
+          ],
+          "intercept": -0.05366073253575498,
+          "slope": 1.4009713242262307,
+          "status": "Optimization terminated successfully."
+        },
+        "patient_equal_weight": {
+          "brier": 0.005142286755443961,
+          "roc_auc": 0.9972537207654146,
+          "average_precision": 0.7819563811098046,
+          "mean_probability": 0.01840590745844775,
+          "prevalence": 0.01678183613030602,
+          "calibration_mean_error": 0.0016240713281417277,
+          "sensitivity": 1.0,
+          "specificity": 0.9720548862115126
+        },
+        "fixed_05_diagnostic": {
+          "sensitivity": 0.7894736842105263,
+          "specificity": 0.9963336388634281
+        },
+        "threshold_from_fold9": 0.014731311395222903
+      }
+    }
+  },
+  "paired_secondary": {
+    "E1 minus E2-C": {
+      "n": 1088,
+      "patients": 1021,
+      "positive": 35,
+      "delta_brier": -0.003409483669368878,
+      "E1": {
+        "brier": 0.005830089932027656,
+        "roc_auc": 0.9986161986161987,
+        "average_precision": 0.9533596630313388,
+        "mean_probability": 0.029579276057863115,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.0025898415891957086,
+        "sensitivity": 0.8285714285714286,
+        "specificity": 0.9971509971509972
+      },
+      "E2-C": {
+        "brier": 0.009239573601396534,
+        "roc_auc": 0.9965540632207299,
+        "average_precision": 0.8866777055030761,
+        "mean_probability": 0.02756248810863339,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.0046066295384254346,
+        "sensitivity": 0.7142857142857143,
+        "specificity": 0.9952516619183286
+      }
+    },
+    "E2-C minus E2": {
+      "n": 1088,
+      "patients": 1021,
+      "positive": 35,
+      "delta_brier": 0.0008423101914502961,
+      "E2-C": {
+        "brier": 0.009239573601396534,
+        "roc_auc": 0.9965540632207299,
+        "average_precision": 0.8866777055030761,
+        "mean_probability": 0.02756248810863339,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.0046066295384254346,
+        "sensitivity": 0.7142857142857143,
+        "specificity": 0.9952516619183286
+      },
+      "E2": {
+        "brier": 0.008397263409946239,
+        "roc_auc": 0.9968525301858635,
+        "average_precision": 0.8908520211748228,
+        "mean_probability": 0.02927233779193783,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.002896779855120993,
+        "sensitivity": 0.7142857142857143,
+        "specificity": 0.9952516619183286
+      }
+    },
+    "E1_C1 minus E2-C_C1": {
+      "n": 1088,
+      "patients": 1021,
+      "positive": 35,
+      "delta_brier": 0.00046493755515370264,
+      "E1_C1": {
+        "brier": 0.0097326182820002,
+        "roc_auc": 0.9962284628951296,
+        "average_precision": 0.9082448845095328,
+        "mean_probability": 0.032027527960950535,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.00014158968610828953,
+        "sensitivity": 0.8285714285714286,
+        "specificity": 0.9943019943019943
+      },
+      "E2-C_C1": {
+        "brier": 0.009267680726846497,
+        "roc_auc": 0.9966083299416633,
+        "average_precision": 0.8884265534293434,
+        "mean_probability": 0.027521884571497096,
+        "prevalence": 0.03216911764705882,
+        "calibration_mean_error": -0.004647233075561728,
+        "sensitivity": 0.7142857142857143,
+        "specificity": 0.9952516619183286
+      }
+    },
+    "E3-I minus E3": {
+      "n": 2198,
+      "patients": 1904,
+      "positive": 54,
+      "delta_brier": 4.726005578902077e-05,
+      "E3-I": {
+        "brier": 0.0060889834063565795,
+        "roc_auc": 0.9976074488667772,
+        "average_precision": 0.908264756037648,
+        "mean_probability": 0.024446174341298334,
+        "prevalence": 0.02456778889899909,
+        "calibration_mean_error": -0.00012161455770075727,
+        "sensitivity": 0.8148148148148148,
+        "specificity": 0.996268656716418
+      },
+      "E3": {
+        "brier": 0.006041723350567559,
+        "roc_auc": 0.9976247236042013,
+        "average_precision": 0.9091189400127884,
+        "mean_probability": 0.024420834051800608,
+        "prevalence": 0.02456778889899909,
+        "calibration_mean_error": -0.0001469548471984833,
+        "sensitivity": 0.8148148148148148,
+        "specificity": 0.9967350746268657
+      }
+    },
+    "Hybrid minus E2-fallback": {
+      "n": 2198,
+      "patients": 1904,
+      "positive": 54,
+      "delta_brier": -0.0012707391919815365,
+      "Hybrid": {
+        "brier": 0.005383916246210964,
+        "roc_auc": 0.998151603095633,
+        "average_precision": 0.9096517227441218,
+        "mean_probability": 0.024019110667477268,
+        "prevalence": 0.02456778889899909,
+        "calibration_mean_error": -0.00054867823152182,
+        "sensitivity": 0.8148148148148148,
+        "specificity": 0.9967350746268657
+      },
+      "E2-fallback": {
+        "brier": 0.006654655438192499,
+        "roc_auc": 0.9971410309563294,
+        "average_precision": 0.8628645776563949,
+        "mean_probability": 0.023867177622287683,
+        "prevalence": 0.02456778889899909,
+        "calibration_mean_error": -0.0007006112767114055,
+        "sensitivity": 0.7407407407407407,
+        "specificity": 0.9958022388059702
+      }
+    }
+  },
+  "fallback_count": 0,
+  "seed": 20261104,
+  "bootstrap_reps": 2000,
+  "bootstrap": {
+    "metrics": {
+      "B0": {
+        "brier": {
+          "low": 0.01697789303251085,
+          "high": 0.031105267648818356,
+          "valid_replicates": 2000
+        },
+        "roc_auc": {
+          "low": 0.5,
+          "high": 0.5,
+          "valid_replicates": 2000
+        },
+        "average_precision": {
+          "low": 0.017216775854503936,
+          "high": 0.03208149804049187,
+          "valid_replicates": 2000
+        },
+        "mean_probability": {
+          "low": 0.024801929038925245,
+          "high": 0.024801929038925252,
+          "valid_replicates": 2000
+        },
+        "prevalence": {
+          "low": 0.017216775854503936,
+          "high": 0.03208149804049187,
+          "valid_replicates": 2000
+        },
+        "calibration_mean_error": {
+          "low": -0.007279569001566624,
+          "high": 0.007585153184421301,
+          "valid_replicates": 2000
+        },
+        "sensitivity": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000
+        }
+      },
+      "E1": {
+        "brier": {
+          "low": 0.003082190413865495,
+          "high": 0.008944934831873015,
+          "valid_replicates": 2000
+        },
+        "roc_auc": {
+          "low": 0.9967384279139114,
+          "high": 0.9998587416696026,
+          "valid_replicates": 2000
+        },
+        "average_precision": {
+          "low": 0.8804185159683349,
+          "high": 0.9957629639949593,
+          "valid_replicates": 2000
+        },
+        "mean_probability": {
+          "low": 0.020608643061152298,
+          "high": 0.039940747449183835,
+          "valid_replicates": 2000
+        },
+        "prevalence": {
+          "low": 0.021118843277934188,
+          "high": 0.04424860399046468,
+          "valid_replicates": 2000
+        },
+        "calibration_mean_error": {
+          "low": -0.0071596869052517435,
+          "high": 0.002217990053986234,
+          "valid_replicates": 2000
+        },
+        "sensitivity": {
+          "low": 0.6875,
+          "high": 0.9474021592442643,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.9933899905571294,
+          "high": 1.0,
+          "valid_replicates": 2000
+        }
+      },
+      "E2-C": {
+        "brier": {
+          "low": 0.004673490923599588,
+          "high": 0.00955195953878045,
+          "valid_replicates": 2000
+        },
+        "roc_auc": {
+          "low": 0.9948358146126703,
+          "high": 0.9987044613737632,
+          "valid_replicates": 2000
+        },
+        "average_precision": {
+          "low": 0.7511588771979777,
+          "high": 0.9435911492469813,
+          "valid_replicates": 2000
+        },
+        "mean_probability": {
+          "low": 0.017056328709907642,
+          "high": 0.028796469663131596,
+          "valid_replicates": 2000
+        },
+        "prevalence": {
+          "low": 0.017216775854503936,
+          "high": 0.03208149804049187,
+          "valid_replicates": 2000
+        },
+        "calibration_mean_error": {
+          "low": -0.005724020243296326,
+          "high": 0.001838715851511814,
+          "valid_replicates": 2000
+        },
+        "sensitivity": {
+          "low": 0.6111111111111112,
+          "high": 0.8666981132075471,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.993169009210556,
+          "high": 0.9990512558792054,
+          "valid_replicates": 2000
+        }
+      },
+      "E2": {
+        "brier": {
+          "low": 0.004332634305510125,
+          "high": 0.009162911191560938,
+          "valid_replicates": 2000
+        },
+        "roc_auc": {
+          "low": 0.9950131312242925,
+          "high": 0.9988275897398664,
+          "valid_replicates": 2000
+        },
+        "average_precision": {
+          "low": 0.7521349431647848,
+          "high": 0.9465271178825188,
+          "valid_replicates": 2000
+        },
+        "mean_probability": {
+          "low": 0.018039947675237582,
+          "high": 0.030294231652931516,
+          "valid_replicates": 2000
+        },
+        "prevalence": {
+          "low": 0.017216775854503936,
+          "high": 0.03208149804049187,
+          "valid_replicates": 2000
+        },
+        "calibration_mean_error": {
+          "low": -0.0044173506145495705,
+          "high": 0.003081728030478693,
+          "valid_replicates": 2000
+        },
+        "sensitivity": {
+          "low": 0.6111111111111112,
+          "high": 0.8666981132075471,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.99255779275667,
+          "high": 0.9985949134671918,
+          "valid_replicates": 2000
+        }
+      },
+      "E3": {
+        "brier": {
+          "low": 0.003898579899265908,
+          "high": 0.008592487343955851,
+          "valid_replicates": 2000
+        },
+        "roc_auc": {
+          "low": 0.9957586152358747,
+          "high": 0.9990101099229969,
+          "valid_replicates": 2000
+        },
+        "average_precision": {
+          "low": 0.8332540276028775,
+          "high": 0.9653178264167515,
+          "valid_replicates": 2000
+        },
+        "mean_probability": {
+          "low": 0.01844158249253913,
+          "high": 0.03102265270789408,
+          "valid_replicates": 2000
+        },
+        "prevalence": {
+          "low": 0.017216775854503936,
+          "high": 0.03208149804049187,
+          "valid_replicates": 2000
+        },
+        "calibration_mean_error": {
+          "low": -0.0036666838333478113,
+          "high": 0.003523585448469322,
+          "valid_replicates": 2000
+        },
+        "sensitivity": {
+          "low": 0.6964091614906832,
+          "high": 0.9180411508865841,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.9939448984488575,
+          "high": 0.9990610328638497,
+          "valid_replicates": 2000
+        }
+      },
+      "E3-I": {
+        "brier": {
+          "low": 0.003937272223293147,
+          "high": 0.008656944801704435,
+          "valid_replicates": 2000
+        },
+        "roc_auc": {
+          "low": 0.9957475060795367,
+          "high": 0.9990060804135787,
+          "valid_replicates": 2000
+        },
+        "average_precision": {
+          "low": 0.8307542573199058,
+          "high": 0.9646039138387564,
+          "valid_replicates": 2000
+        },
+        "mean_probability": {
+          "low": 0.018432011802637163,
+          "high": 0.031072081039806205,
+          "valid_replicates": 2000
+        },
+        "prevalence": {
+          "low": 0.017216775854503936,
+          "high": 0.03208149804049187,
+          "valid_replicates": 2000
+        },
+        "calibration_mean_error": {
+          "low": -0.003651998727364836,
+          "high": 0.0035435010256152847,
+          "valid_replicates": 2000
+        },
+        "sensitivity": {
+          "low": 0.6964091614906832,
+          "high": 0.9180411508865841,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.9934609231427362,
+          "high": 0.9986020828669162,
+          "valid_replicates": 2000
+        }
+      },
+      "E1_C1": {
+        "brier": {
+          "low": 0.004869158037984948,
+          "high": 0.015468955232513602,
+          "valid_replicates": 2000
+        },
+        "roc_auc": {
+          "low": 0.9927377405271028,
+          "high": 0.9989488510700849,
+          "valid_replicates": 2000
+        },
+        "average_precision": {
+          "low": 0.8208501039231446,
+          "high": 0.971719240800542,
+          "valid_replicates": 2000
+        },
+        "mean_probability": {
+          "low": 0.021449172722080866,
+          "high": 0.043827384944998035,
+          "valid_replicates": 2000
+        },
+        "prevalence": {
+          "low": 0.021118843277934188,
+          "high": 0.04424860399046468,
+          "valid_replicates": 2000
+        },
+        "calibration_mean_error": {
+          "low": -0.00571421053997347,
+          "high": 0.005664191092870231,
+          "valid_replicates": 2000
+        },
+        "sensitivity": {
+          "low": 0.6923076923076923,
+          "high": 0.9444819819819817,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.9893304878852656,
+          "high": 0.9981482763927362,
+          "valid_replicates": 2000
+        }
+      },
+      "E2-C_C1": {
+        "brier": {
+          "low": 0.004690743561011415,
+          "high": 0.009575349229960834,
+          "valid_replicates": 2000
+        },
+        "roc_auc": {
+          "low": 0.9949098198760258,
+          "high": 0.9987400415897264,
+          "valid_replicates": 2000
+        },
+        "average_precision": {
+          "low": 0.7520780644630429,
+          "high": 0.9444815631063199,
+          "valid_replicates": 2000
+        },
+        "mean_probability": {
+          "low": 0.017066736585977366,
+          "high": 0.028733938697104337,
+          "valid_replicates": 2000
+        },
+        "prevalence": {
+          "low": 0.017216775854503936,
+          "high": 0.03208149804049187,
+          "valid_replicates": 2000
+        },
+        "calibration_mean_error": {
+          "low": -0.00574741921721087,
+          "high": 0.0018234699336584397,
+          "valid_replicates": 2000
+        },
+        "sensitivity": {
+          "low": 0.6111111111111112,
+          "high": 0.8666981132075471,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.993169009210556,
+          "high": 0.9990512558792054,
+          "valid_replicates": 2000
+        }
+      },
+      "E2-fallback": {
+        "brier": {
+          "low": 0.004332634305510125,
+          "high": 0.009162911191560938,
+          "valid_replicates": 2000
+        },
+        "roc_auc": {
+          "low": 0.9950131312242925,
+          "high": 0.9988275897398664,
+          "valid_replicates": 2000
+        },
+        "average_precision": {
+          "low": 0.7521349431647848,
+          "high": 0.9465271178825188,
+          "valid_replicates": 2000
+        },
+        "mean_probability": {
+          "low": 0.018039947675237582,
+          "high": 0.030294231652931516,
+          "valid_replicates": 2000
+        },
+        "prevalence": {
+          "low": 0.017216775854503936,
+          "high": 0.03208149804049187,
+          "valid_replicates": 2000
+        },
+        "calibration_mean_error": {
+          "low": -0.0044173506145495705,
+          "high": 0.003081728030478693,
+          "valid_replicates": 2000
+        },
+        "sensitivity": {
+          "low": 0.6111111111111112,
+          "high": 0.8666981132075471,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.99255779275667,
+          "high": 0.9985949134671918,
+          "valid_replicates": 2000
+        }
+      },
+      "Hybrid": {
+        "brier": {
+          "low": 0.0035712875276851194,
+          "high": 0.007489880899938672,
+          "valid_replicates": 2000
+        },
+        "roc_auc": {
+          "low": 0.9965654164196496,
+          "high": 0.9993564694517217,
+          "valid_replicates": 2000
+        },
+        "average_precision": {
+          "low": 0.8202835603082407,
+          "high": 0.9734729529169271,
+          "valid_replicates": 2000
+        },
+        "mean_probability": {
+          "low": 0.01816033979838305,
+          "high": 0.03028015018650679,
+          "valid_replicates": 2000
+        },
+        "prevalence": {
+          "low": 0.017216775854503936,
+          "high": 0.03208149804049187,
+          "valid_replicates": 2000
+        },
+        "calibration_mean_error": {
+          "low": -0.003833827780504795,
+          "high": 0.0029160448239846258,
+          "valid_replicates": 2000
+        },
+        "sensitivity": {
+          "low": 0.7068470887507066,
+          "high": 0.9166666666666666,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.9939308348280929,
+          "high": 0.9990566592674806,
+          "valid_replicates": 2000
+        }
+      }
+    },
+    "paired_brier": {
+      "E3 minus E2-fallback": {
+        "low": -0.002380012257832108,
+        "high": 0.0011330219950107495,
+        "valid_replicates": 2000
+      },
+      "E3-I minus E3": {
+        "low": -2.0147450710992415e-05,
+        "high": 0.0001289000508252592,
+        "valid_replicates": 2000
+      },
+      "Hybrid minus E2-fallback": {
+        "low": -0.0028209331865035143,
+        "high": 0.00012054129869126554,
+        "valid_replicates": 2000
+      },
+      "E1 minus E2-C": {
+        "low": -0.006613354396399788,
+        "high": -0.000498304259146406,
+        "valid_replicates": 2000
+      },
+      "E2-C minus E2": {
+        "low": -0.00012624211982674275,
+        "high": 0.0018300992037171796,
+        "valid_replicates": 2000
+      },
+      "E1_C1 minus E2-C_C1": {
+        "low": -0.003871806409656941,
+        "high": 0.005073258691095023,
+        "valid_replicates": 2000
+      }
+    },
+    "replicates": 2000,
+    "unit": "patient",
+    "binary_frozen_thresholds": {
+      "B0": {
+        "sensitivity": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000
+        }
+      },
+      "E1": {
+        "sensitivity": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.9459452815647506,
+          "high": 0.9710287136661518,
+          "valid_replicates": 2000
+        }
+      },
+      "E2-C": {
+        "sensitivity": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.9470006911324952,
+          "high": 0.9658562205944791,
+          "valid_replicates": 2000
+        }
+      },
+      "E2": {
+        "sensitivity": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.9445479535605645,
+          "high": 0.9635858589819503,
+          "valid_replicates": 2000
+        }
+      },
+      "E3": {
+        "sensitivity": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.9518859189378057,
+          "high": 0.9694559622454776,
+          "valid_replicates": 2000
+        }
+      },
+      "E3-I": {
+        "sensitivity": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.9538814479638009,
+          "high": 0.9710492280182891,
+          "valid_replicates": 2000
+        }
+      },
+      "E1_C1": {
+        "sensitivity": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.9355141420099973,
+          "high": 0.962892433449074,
+          "valid_replicates": 2000
+        }
+      },
+      "E2-C_C1": {
+        "sensitivity": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.948102332322007,
+          "high": 0.966484548004838,
+          "valid_replicates": 2000
+        }
+      },
+      "E2-fallback": {
+        "sensitivity": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.9445479535605645,
+          "high": 0.9635858589819503,
+          "valid_replicates": 2000
+        }
+      },
+      "Hybrid": {
+        "sensitivity": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000
+        },
+        "specificity": {
+          "low": 0.9525778093364716,
+          "high": 0.969642695483118,
+          "valid_replicates": 2000
+        }
+      }
+    },
+    "note": "metrics.sensitivity/specificity use legacy 0.5; binary_frozen_thresholds use fold9 thresholds"
+  }
+}

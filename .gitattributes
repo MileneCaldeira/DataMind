@@ -1,0 +1,3 @@
+# Scientific hashes refer to exact bytes, including existing line endings.
+# Do not normalize frozen files on add or checkout.
+* -text

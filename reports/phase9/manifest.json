@@ -1,0 +1,20 @@
+{
+  "phase": 9,
+  "files": {
+    "reports/fase9_resumo_pesquisa.md": "a86e5436b2d9a6674b6331f204fe5f1b7be31e65b8c82fdc9c1396a507407e0d",
+    "docs/fase9_revisao_clinica.md": "f2e50872b5d2be9370f11be94ad3f11378bd235b7da45bcdfae89f66d248b9ab",
+    "docs/fase9_revisao_estatistica.md": "9f4238f6413693a380ebe1d1bfe7485b50f107bf5b99c2e9d29bac882d327a99",
+    "docs/fase9_revisao_editorial.md": "ceddb15745151a22bbbcaf57adbdf3105b38ea2616b176bb3291cca2f1c1b2b3",
+    "reports/fase9_matriz_feedback.md": "cdc2bf6d20908073f08718708101f11c7b9c849d5e135e014b19166d0d5e4523",
+    "apresentacao/fase9_apresentacao.md": "9cad3a48d10a768d70cf2dbf74a10e036a94b1729c422a589c0a9445465baa3a",
+    "reports/fase9_pendencias.md": "bb8a3edad6e9b6c1d3ca3145bbbed95f8f3c13b3920ed1c624c505709c3193f8",
+    "scripts/fase9_verify.py": "e1e805bdabd1dc45a56aa1a1fc2630e664447ec4e5f5f95b4867f6a5cac4d10e",
+    "reports/phase9/verification.json": "f6a41e2b4916a55b206eec04fb94ca28b70a66f057808a8d693f19aea8dee742"
+  },
+  "prior_manifest_hashes": {
+    "reports/phase5/run001/freeze.json": "3783cdd42587a146590850bec1aed0caed89cc11ac624135fdd968a778cefcb0",
+    "reports/phase6/final001/delivery_manifest.json": "3831233dd63fce1516c25d73050fad86beeff1f11cada64ddcf6e97a9b1bc8e8",
+    "reports/phase7/manifest.json": "34884e49dda484918852f8509ae00d056ed090883a72eacbad0d13ae2a092137",
+    "reports/phase8/manifest.json": "35b789dd2a28fee81ccdce94f78a411c8447391cd1a50fb54dd3d9a3079ed8bb"
+  }
+}

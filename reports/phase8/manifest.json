@@ -1,0 +1,25 @@
+{
+  "phase": 8,
+  "date": "2026-11-05",
+  "new_predictions": 0,
+  "new_training": 0,
+  "new_statistical_analyses": 0,
+  "files": {
+    "reports/phase8/baseline_hashes.json": "61e8207c6a6577d26fecf95e935b7f63b2da749fb32bf1c9fac5f67c7bd49c5f",
+    "reports/phase8/revisao_log.md": "9290b5f62d6a6d5d571e3488ff0f07855f030cd97b773a63461b3a246d2a2e33",
+    "reports/phase8/verification.json": "0eb7f72e7e9330a02d284f3d8e7337112752f549fe931a5473398771c762e292",
+    "reports/phase8/sources/access.json": "403e215dc2623761651e6c4f98702518b4b52c20741ae3932f49754e3c3cb448",
+    "reports/phase8/sources/hoogland.xml": "b055e82a54d836bb5c3849d0dee16c888f4c080a9975c3d1dadab04f98f1c75d",
+    "reports/phase8/sources/sisk_supp.zip": "d30ecfd35a4a72f0a80e77d642fa71d3a97d587446031db21e568abb76c095c4",
+    "reports/phase8/sources/sisk_supp_text.txt": "1ca5b9fe8c2a6cb76faff1b5a785261e20b43a50ab1c071db3d4064810264125",
+    "reports/fase8_auditoria_estatistica.md": "7e8272154ab22ba695296936fc165f4f47ca9a8087b712a3a0e15b41b7e399d7",
+    "reports/fase8_decisao.md": "ec5404d2123dcd635fd147f091b879c0b17b475c3b9ec88e23633b95caec5b10",
+    "reports/fase8_parecer_cientifico.md": "df00d3e1643d1c0cefa3528347a33a122e6d002ca4e4e816fa104d8eac1abe3e",
+    "reports/fase8_pendencias_especialistas.md": "d70b942a2f38a34685c48bf98d7ae91b53c584619ca9a49ff9d0a0040b394aaa",
+    "docs/fase8_originalidade.md": "bdf426cfdc52b2548211b2c18f74ac0aa9ab1bce10e212f7c6b4672bc2070de7",
+    "scripts/fase8_revise.py": "d3acff057b4488953634ecba8ab62ed5a2f4d017bb39fa17cdbd95a01de07ebd",
+    "scripts/fase8_verify.py": "baad5ea0ac2bb27ea09a9b4c4735f4ba72a41538fcf6b24b281301d57920fa7a",
+    "docs/guia_defesa_pesquisa.md": "065becc1a4627c451435fbc53fcb3a895cbbda260916566a6f0e14a0e30d0b53",
+    "artigo/manuscrito_v2.md": "093514d7597a78769ceba41fa5767dfdd40e25c2bbe1c75fafc32e0f83f1a76d"
+  }
+}

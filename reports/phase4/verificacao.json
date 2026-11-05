@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-04",
+  "phase3_outputs_unchanged": {
+    "reports\\phase3\\auditoria.json": "795c1903e809ef0f8746acc8cb3fe098b36324831dcd92767248d31c736a5157",
+    "reports\\phase3\\entradas.json": "64e0cde611b74437121e4f402819a58f6f3e52e950703c112b24f7669d13f01b"
+  },
+  "phase2": "PASS: 6 source hashes; identical audit; 8 dataset views; target counts reconciled.\nPASS Phase 2: 44 hashes; cohorts and denominators reconcile; semantic boundaries; offline outputs unchanged.",
+  "phase4_repeat_identical": "c800c53639018f9de364c7eb91d9bbe2d597de962733a1e364dc3daec25df09f",
+  "tests": "4 passed; python -m unittest discover -s tests -v",
+  "local_links": "passed",
+  "training_executed": false,
+  "downloads_in_phase4": 0
+}
