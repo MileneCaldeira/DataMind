@@ -1,0 +1,6 @@
+data/raw/
+data/samples/diabetes*
+__pycache__/
+.venv/
+*.pyc
+.venv-phase5/

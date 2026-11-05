@@ -1,0 +1,43 @@
+{
+  "status": "protocolo_candidato_aguarda_aprovacao_sem_treinamento",
+  "version": "2026-11-04",
+  "seed": 20261104,
+  "target": "presence_CRBBB_in_scp_codes",
+  "train_folds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "validation_folds": [
+    9
+  ],
+  "test_folds": [
+    10
+  ],
+  "primary_contrast": "Brier_E3_minus_E2fallback_on_all_test_exams",
+  "panel": [
+    "QRS_Dur_Global",
+    "RR_Mean_Global",
+    "QRS_Dur_V1",
+    "R_Amp_V1",
+    "S_Amp_V1",
+    "QRS_Dur_V6",
+    "R_Amp_V6",
+    "S_Amp_V6"
+  ],
+  "model": "logistic_L2",
+  "C_grid": [
+    0.01,
+    0.1,
+    1,
+    10
+  ],
+  "class_weight": null,
+  "bootstrap_patient_replicates": 2000,
+  "training_enabled": false
+}
