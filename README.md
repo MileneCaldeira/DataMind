@@ -1,116 +1,96 @@
-# DataMind — estado atual
+# DataMind
 
-Atualizado em 16/11/2026 — revisão de linguagem e autoria. **Fases 1–9 documentadas; modelos treinados e teste final executado.** Manuscrito v4 preparado para revisão humana, sem validação clínica ou submissão.
+**Pesquisa em Ciência de Dados aplicada à eletrocardiografia**  
+**Autoria:** Milene Caldeira
 
-Revisão editorial de 16/11/2026 e plano de quatro semanas em [aprimoramento da pesquisa](reports/aprimoramento_pesquisa_2026-11-16.md).
+O DataMind investiga como a disponibilidade de medidas extraídas de eletrocardiogramas (ECGs) influencia a cobertura de exames e a avaliação de modelos de classificação. O estudo utiliza dados públicos do PTB-XL e PTB-XL+ para comparar diferentes estratégias de uso de medidas eletrocardiográficas na identificação da anotação de **bloqueio completo do ramo direito (CRBBB)**.
 
-Autoria do projeto: **MileneCaldeira**, pesquisadora responsável pelas decisões científicas. Ferramentas computacionais apoiaram programação, análise e redação; não constituem autoria científica, orientação ou revisão humana especializada. Identificação acadêmica formal e contribuições de futuros colaboradores dependem de confirmação.
+## Pergunta de pesquisa
 
-Revisão atual: [linguagem e autoria](reports/revisao_linguagem_autoria.md), [parecer científico](reports/parecer_cientifico_v3.md), [lacunas priorizadas](reports/matriz_lacunas_v3.md), [plano de evolução](docs/plano_evolucao_cientifica.md) e [guia de estudos](docs/guia_estudos_datamind.md).
+Como diferentes requisitos de disponibilidade das medidas eletrocardiográficas afetam a proporção de exames avaliáveis e o desempenho probabilístico de classificadores da anotação CRBBB?
 
-## Comece aqui
+A análise considera tanto os resultados dos modelos quanto os exames que cada estratégia consegue atender. A comparação é operacional: as estratégias diferem no conjunto de variáveis e no tratamento de medidas ausentes, portanto os resultados não isolam um efeito causal da imputação.
 
-- [Painel de estado](STATUS_DATAMIND.md): concluído, pendente e não verificado.
-- [Entenda a IA construída](docs/ENTENDA_A_IA.md): explicação para quem trabalha com BI/SQL.
-- [Guia do projeto](GUIA_DO_PROJETO.md): trajetória e arquivos principais.
-- [Auditoria master](reports/auditoria_master.md): evidências, limites e achados.
+## Dados e metodologia
 
-## Pesquisa e resultado
+O estudo utiliza duas fontes complementares do mesmo conjunto de ECGs:
 
-O estudo investiga como a disponibilidade de medidas de ECG modifica cobertura, composição e avaliação de classificadores da **anotação CRBBB**. A comparação principal é operacional: 531 medidas com imputação (E3) versus oito medidas com fallback (E2-fallback), nos mesmos exames. Não isola o efeito causal da imputação.
+- [PTB-XL 1.0.3](https://doi.org/10.13026/kfzx-aw45): metadados e anotações eletrocardiográficas.
+- [PTB-XL+ 1.0.1](https://doi.org/10.13026/g6h6-7g88): medidas extraídas dos exames, incluindo características do ECGDeli.
 
-PTB-XL 1.0.3 fornece metadados/anotações; PTB-XL+ 1.0.1 fornece medidas ECGDeli dos mesmos exames. Não são bases de validação independentes. Heart Disease, Adult, diabetes, uma amostra PhysioNet 2019 e materiais CODE-test pertencem à trajetória de viabilidade; não foram usados para treinar o classificador atual.
+A integração é realizada por `ecg_id`. Como as fontes correspondem aos mesmos exames, sua combinação não representa validação externa.
 
-Foram implementadas regressões logísticas L2: E1 (531 completas), E2-C (oito, treino restrito aos completos), E2 (oito, treino elegível), E3 (531 imputadas), E3-I (com indicadores) e controles C=1. B0 é prevalência constante; fallback e híbrida combinam estratégias existentes. Não há Random Forest, XGBoost, rede neural treinada pelo projeto, aplicativo clínico ou API implantada.
+Foram desenvolvidos classificadores com **regressão logística e regularização L2**, além de controles para examinar o efeito da disponibilidade das características e da população de desenvolvimento. O contraste principal compara:
 
-Teste final: **2.198 exames / 1.904 pacientes; 54 positivos / 45 pacientes**. Brier E2-fallback **0,006655**, E3 **0,006042**; diferença **−0,000613**, IC95% **[−0,002380; +0,001133]**. Superioridade não sustentada; equivalência não demonstrada. Exigir 531 medidas completas cobriu **49,50% dos exames e 64,81% dos positivos**. Fallback não acionado. Híbrida: Brier **0,005384**, secundário. [Resultados completos](reports/fase6_resultados_finais.md).
+| Estratégia | Descrição |
+| --- | --- |
+| **E2-fallback** | Painel de oito medidas, com política de fallback definida no protocolo. |
+| **E3** | Painel de 531 medidas, com imputação para valores ausentes. |
 
-## Arquitetura e pastas
+As partições seguem os folds do conjunto de dados, sem compartilhamento de pacientes entre desenvolvimento e teste: folds 1–8 para desenvolvimento, fold 9 para validação e definição de limiares e fold 10 para avaliação final. O desfecho principal é a diferença pareada no **Brier Score**, com intervalo de confiança obtido por reamostragem agrupada por paciente.
 
-Dados → auditoria/integração → transformações no treino → modelos → probabilidades salvas → métricas → manuscrito/apresentação.
+O protocolo, as demais estratégias e os critérios de comparação estão documentados nos [relatórios do projeto](reports/) e no [manuscrito](artigo/manuscrito_v4.md).
 
-|Local|Função|
-|---|---|
-|data/|Originais, fontes e amostras; preservar e revisar licenças antes de distribuir|
-|experiments/|Configurações históricas e do piloto; não são autorização para executar|
-|src/datamind/; scripts/; tests/|Lógica compartilhada, executores e testes|
-|reports/phase5/run001/|Configuração, limiares, ambiente, modelos e freeze.json|
-|reports/phase6/final001/|Probabilidades finais, métricas e registro da execução única|
-|docs/; reports/|Protocolos, literatura, decisões e interpretação|
-|artigo/; apresentacao/|Manuscrito v4, histórico v1/v2/v3, figuras/tabelas e cinco slides Markdown|
-|.venv-phase5/; .venv-phase7/|Ambientes Windows/Python; versões fixadas nos locks (ver consulta segura)|
+## Resultados principais
 
-## Consulta segura e reprodução
+A avaliação final reuniu **2.198 exames de 1.904 pacientes**, incluindo **54 exames com a anotação CRBBB, pertencentes a 45 pacientes**.
 
-Raiz operacional após a migração: `C:\Users\Administrador\OneDrive\Documentos\DataMind`. Execute os comandos a partir dessa pasta. Caminhos antigos em registros históricos e manifestos devem permanecer preservados. Use `.\.venv-phase5\Scripts\python.exe -B` para verificações de modelos e `.\.venv-phase7\Scripts\python.exe -B` para o ambiente de figuras; prefira `python -m pip` ao pip global. Os ambientes anteriores foram preservados com sufixo `-pre-migration` e não são os ambientes operacionais.
+| Indicador | Resultado |
+| --- | ---: |
+| Brier Score — E2-fallback | 0,006655 |
+| Brier Score — E3 | 0,006042 |
+| Diferença de Brier (E3 − E2-fallback) | −0,000613 |
+| IC de 95% da diferença | [−0,002380; +0,001133] |
+| Cobertura com as 531 medidas completas | 49,50% dos exames |
+| Cobertura dos positivos com as 531 medidas completas | 64,81% |
 
+A diferença observada no Brier Score **não sustenta uma conclusão de superioridade entre as estratégias**, e o estudo não foi desenhado para demonstrar equivalência. O fallback não foi acionado na avaliação final. Uma estratégia híbrida apresentou Brier de 0,005384, resultado considerado **secundário**.
 
-**Saneamento técnico de 05/11/2026:** consulta de integridade atual por `python -B scripts/verify_preservation.py`. O comando não carrega modelos nem grava resultados; distingue snapshots históricos, congelamentos ativos e documentação atual. Testes seguros: `python -B -m unittest discover -s tests -p test_maintenance.py -v`. Não omitir o filtro: a suíte antiga inclui treino/predição sintéticos.
+Os resultados mostram que exigir todas as medidas altera a população de exames incluídos na avaliação. Isso reforça a importância de relatar **cobertura e desempenho conjuntamente**, sem concluir que o painel reduzido seja suficiente em outros contextos.
 
-Os ambientes de treino e figuras foram reconstruídos em venvs temporárias com Python 3.13.7 e locks exatos; pip check/importações passaram e os sete modelos puderam ser desserializados sem previsão. Isso não retesta o experimento integral. Evidências e comandos: [saneamento final](reports/saneamento_tecnico_final.md).
+[Resultados detalhados](reports/fase6_resultados_finais.md) · [Manuscrito v4](artigo/manuscrito_v4.md)
 
-Backup executável: `python -B scripts/backup_project.py --destination "UNIDADE_EXTERNA_AUTORIZADA/BackupDataMind" --authorized-destination`. Substituir somente por diretório existente, privado e autorizado em outro disco físico. O comando recusa o mesmo disco, preserva cópias anteriores, verifica hashes e restaura arquivos críticos em área da própria cópia. Nenhum destino externo está disponível/autorizado nesta inspeção; backup real continua pendente.
+## Limitações
 
-Para consultar, abra Markdown, JSON, CSV e figuras existentes **sem executar scripts**. Fonte numérica: reports/phase6/final001/metrics.json. Sensibilidade/especificidade com limiares congelados estão em overall/strata e bootstrap.binary_frozen_thresholds; campos legados primary/paired e bootstrap.metrics usam 0,5.
+A pesquisa utiliza anotações disponibilizadas nas bases de origem, sem reavaliação clínica independente dos diagnósticos. O número de pacientes positivos é limitado, e a comparação não inclui validação em uma população externa. A seleção das oito medidas foi exploratória e há pontos de interpretação das características eletrocardiográficas que ainda precisam ser esclarecidos.
 
-Duas verificações inspecionadas como somente leitura, executadas da raiz com Python: `python -B scripts/verify.py` e `python -B scripts/fase5_freeze.py --check`. Elas verificam referências específicas; não validam clinicamente o estudo nem reproduzem treinamento.
+Os resultados descrevem o comportamento dos modelos neste conjunto de dados. **Não constituem validação para uso clínico ou diagnóstico individual.**
 
-Não chamar novamente fase6_predict_once.py. Não executar verificadores indiscriminadamente: fase5_verify.py gera previsões de validação e executa testes com ajustes sintéticos; outros scripts escrevem logs, resultados ou manifestos. Instruções históricas abaixo não são um roteiro de execução atual.
+## Estrutura do repositório
 
-Folds 1–8: desenvolvimento; 9: limiares/validação; 10: teste já utilizado. Preserve dados, modelos, configurações, limiares, probabilidades e manifestos. Dependências: reports/phase5/run001/requirements.lock.txt e reports/phase7/requirements-render.lock. Python 3.13.7 registrado. [Plano de backup](reports/plano_backup.md) e [auditoria Git](reports/auditoria_git.md): versionamento não substitui backup.
+| Diretório | Conteúdo |
+| --- | --- |
+| `artigo/` | Manuscritos, figuras e tabelas |
+| `docs/` | Protocolos, referências e decisões metodológicas |
+| `src/datamind/` | Código de processamento e modelagem |
+| `scripts/` | Rotinas de análise e verificação |
+| `tests/` | Testes de manutenção |
+| `experiments/` | Configurações experimentais |
+| `reports/phase5/run001/` | Configurações e artefatos dos modelos finais |
+| `reports/phase6/final001/` | Probabilidades e métricas da avaliação final |
+| `data/` | Arquivos de dados e amostras locais, sujeitos às respectivas licenças |
 
-## Limites e publicação
+## Reprodutibilidade
 
-Poucos pacientes positivos; alvo derivado do próprio ECG; ausência de validação externa; painel exploratório; ambiguidades RR_Mean_Global/RRi_max e QRS_Dur_Global/QRSd_max; calibração limitada. AUC alta e sensibilidade observada de 100% não provam diagnóstico independente ou perfeição populacional.
+O ambiente original foi registrado com **Python 3.13.7**. As dependências estão documentadas em `reports/phase5/run001/requirements.lock.txt` e `reports/phase7/requirements-render.lock`.
 
-Contribuição incremental de avaliação e cobertura. [Manuscrito v4](artigo/manuscrito_v4.md) pronto para revisão especializada, não para uso clínico ou submissão automática. Faltam cardiologista, bioestatístico, avaliação editorial e decisões institucionais/autoria/licença. [Pacote de revisão](reports/fase9_pendencias.md).
+Na raiz do projeto, as verificações de manutenção podem ser executadas com o ambiente Python correspondente:
 
-## Registro histórico preservado — Fases 1–2
-
-O texto abaixo descreve o estado em 03/11/2026. Afirmações de ausência de modelos, biblioteca padrão e experimentos futuros têm esse escopo histórico; não descrevem as Fases 5–9.
-
-### DataMind (texto original)
-
-Diagnóstico de viabilidade realizado em **03/11/2026 (America/Sao_Paulo)**. Nenhum modelo foi treinado.
-
-**Fase 2 concluída:** [validação científica](reports/validacao_cientifica.md), [revisão direcionada](docs/revisao_literatura.md), [matriz de qualidade](docs/matriz_qualidade.md) e [perguntas candidatas](docs/perguntas_candidatas.md). Recomendação: **reformular A**, sem aprovação definitiva. Acesso amostral ao PhysioNet confirmado, com divergência de licença registrada.
-
-Leia [o relatório](reports/viabilidade.md), [as decisões](docs/decisoes.md) e [a revisão inicial](docs/literatura.md).
-
-## Reproduzir
-
-Python 3.13.7 foi usado no Windows 11. O código usa apenas a biblioteca padrão, sem instalação de pacotes, conta ou credencial.
-
-```powershell
-python scripts/audit.py
-python scripts/verify.py
+```bash
+python -B scripts/verify_preservation.py
+python -B -m unittest discover -s tests -p test_maintenance.py -v
 ```
 
-Para repetir sem rede, após o primeiro download:
+Esses comandos verificam a integridade dos artefatos e aspectos de manutenção; **não reproduzem integralmente o treinamento ou a avaliação final**. As probabilidades e métricas da execução original estão preservadas em `reports/phase6/final001/`.
 
-```powershell
-python scripts/audit.py --offline
-python scripts/verify.py
-```
+Para informações sobre ambientes, preservação e recuperação dos resultados, consulte a [documentação técnica](reports/saneamento_tecnico_final.md).
 
-Execute de qualquer diretório usando o caminho do script. Os caminhos de saída são relativos à raiz do projeto. A auditoria sobrescreve `reports/audit.json`, inventários, amostras e `runtime.json`; o log de acesso é cumulativo. A execução inicial está preservada em `reports/baseline/`. A verificação compara hashes dos arquivos e resultados ao diagnóstico inicial; se a fonte mudar, falha para revisão humana, sem atualizar a referência automaticamente.
+## Documentação
 
-Fase 2, usando cache local (padrão sem rede):
+- [Manuscrito atual](artigo/manuscrito_v4.md)
+- [Resultados da avaliação final](reports/fase6_resultados_finais.md)
+- [Guia do projeto](GUIA_DO_PROJETO.md)
+- [Plano de evolução da pesquisa](docs/plano_evolucao_cientifica.md)
+- [Fontes de dados e licenças](docs/dados-e-licencas.md)
 
-```powershell
-python scripts/phase2.py
-python scripts/verify_phase2.py
-```
-
-Em uma cópia nova, após obter os arquivos da Fase 1, use `python scripts/phase2.py --download` para baixar documentos e a amostra PhysioNet. Arquivos já presentes não são substituídos. O manifesto da Fase 2 registra os bytes usados e falha se forem diferentes; não se atualiza automaticamente. `docs/matriz_qualidade.md` e `docs/atributos_heart76.md` são gerados pelo script; os demais relatórios são interpretativos. A verificação de reprodução não equivale a validação científica independente.
-
-## Organização
-
-- `scripts/`: download, auditoria e verificação; sem modelagem.
-- `data/raw/`: originais locais, ignorados pelo Git; URLs e hashes no log.
-- `data/samples/`: primeiras 20 linhas de cada tabela, apenas para inspeção de formato, sem representatividade estatística.
-- `reports/`: resultados completos por coluna, acesso, inventários ZIP e relatório interpretativo.
-- `docs/`: decisões, literatura e atribuições.
-- `experiments/`: protocolo para trabalhos futuros, ainda não executados.
-
-Heart Disease e Adult: amostras derivadas de dados UCI sob CC BY 4.0; ver [atribuições](docs/dados-e-licencas.md). A amostra de diabetes permanece local e ignorada pelo Git enquanto a licença da derivação não for esclarecida. Dados brutos não são redistribuídos por este repositório. Não há licença geral de software definida nesta etapa.
+**Situação da pesquisa:** experimentos e avaliação final concluídos; interpretação metodológica e preparação do manuscrito em andamento.
