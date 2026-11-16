@@ -1,9 +1,9 @@
 # DataMind
 
 **Pesquisa em Ciência de Dados aplicada à eletrocardiografia**  
-**Autoria:** Milene Caldeira
+**Pesquisadora:** Milene Caldeira, integrante do DataMind
 
-O DataMind investiga como a disponibilidade de medidas extraídas de eletrocardiogramas (ECGs) influencia a cobertura de exames e a avaliação de modelos de classificação. O estudo utiliza dados públicos do PTB-XL e PTB-XL+ para comparar diferentes estratégias de uso de medidas eletrocardiográficas na identificação da anotação de **bloqueio completo do ramo direito (CRBBB)**.
+Esta pesquisa desenvolvida por Milene Caldeira no âmbito do DataMind investiga como a disponibilidade de medidas extraídas de eletrocardiogramas (ECGs) influencia a cobertura de exames e a avaliação de modelos de classificação. O estudo utiliza dados públicos do PTB-XL e PTB-XL+ para comparar diferentes estratégias de uso de medidas eletrocardiográficas na identificação da anotação de **bloqueio completo do ramo direito (CRBBB)**.
 
 ## Pergunta de pesquisa
 

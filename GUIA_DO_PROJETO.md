@@ -18,7 +18,7 @@ Leia nesta ordem:
 
 ## O que é o DataMind
 
-É um projeto de pesquisa sobre dados e inteligência artificial aplicada à saúde. O repositório guarda a investigação atual e o caminho até ela: viabilidade, decisões, dados, programas, resultados e textos científicos.
+Este repositório reúne a pesquisa de Milene Caldeira, uma das pesquisadoras integrantes do DataMind, sobre dados e inteligência artificial aplicada à saúde. O repositório guarda a investigação atual e o caminho até ela: viabilidade, decisões, dados, programas, resultados e textos científicos.
 
 A pesquisa atual estuda como a disponibilidade de medidas extraídas do eletrocardiograma afeta cobertura, composição da população avaliada e desempenho de classificadores da **anotação CRBBB**, relacionada ao bloqueio completo do ramo direito. Reconhecer essa anotação do próprio ECG não demonstra diagnóstico independente ou utilidade clínica.
 
