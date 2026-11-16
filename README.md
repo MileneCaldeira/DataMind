@@ -1,6 +1,12 @@
 # DataMind — estado atual
 
-Atualizado em 05/11/2026 após auditoria técnica de leitura. **Fases 1–9 documentadas; modelos treinados e teste final executado.** Manuscrito v2 preparado para revisão humana, sem validação clínica ou submissão.
+Atualizado em 16/11/2026 — revisão de linguagem e autoria. **Fases 1–9 documentadas; modelos treinados e teste final executado.** Manuscrito v4 preparado para revisão humana, sem validação clínica ou submissão.
+
+Revisão editorial de 16/11/2026 e plano de quatro semanas em [aprimoramento da pesquisa](reports/aprimoramento_pesquisa_2026-11-16.md).
+
+Autoria do projeto: **MileneCaldeira**, pesquisadora responsável pelas decisões científicas. Ferramentas computacionais apoiaram programação, análise e redação; não constituem autoria científica, orientação ou revisão humana especializada. Identificação acadêmica formal e contribuições de futuros colaboradores dependem de confirmação.
+
+Revisão atual: [linguagem e autoria](reports/revisao_linguagem_autoria.md), [parecer científico](reports/parecer_cientifico_v3.md), [lacunas priorizadas](reports/matriz_lacunas_v3.md), [plano de evolução](docs/plano_evolucao_cientifica.md) e [guia de estudos](docs/guia_estudos_datamind.md).
 
 ## Comece aqui
 
@@ -11,7 +17,7 @@ Atualizado em 05/11/2026 após auditoria técnica de leitura. **Fases 1–9 docu
 
 ## Pesquisa e resultado
 
-Investigamos como a disponibilidade de medidas de ECG modifica cobertura, composição e avaliação de classificadores da **anotação CRBBB**. A comparação principal é operacional: 531 medidas com imputação (E3) versus oito medidas com fallback (E2-fallback), nos mesmos exames. Não isola o efeito causal da imputação.
+O estudo investiga como a disponibilidade de medidas de ECG modifica cobertura, composição e avaliação de classificadores da **anotação CRBBB**. A comparação principal é operacional: 531 medidas com imputação (E3) versus oito medidas com fallback (E2-fallback), nos mesmos exames. Não isola o efeito causal da imputação.
 
 PTB-XL 1.0.3 fornece metadados/anotações; PTB-XL+ 1.0.1 fornece medidas ECGDeli dos mesmos exames. Não são bases de validação independentes. Heart Disease, Adult, diabetes, uma amostra PhysioNet 2019 e materiais CODE-test pertencem à trajetória de viabilidade; não foram usados para treinar o classificador atual.
 
@@ -31,10 +37,13 @@ Dados → auditoria/integração → transformações no treino → modelos → 
 |reports/phase5/run001/|Configuração, limiares, ambiente, modelos e freeze.json|
 |reports/phase6/final001/|Probabilidades finais, métricas e registro da execução única|
 |docs/; reports/|Protocolos, literatura, decisões e interpretação|
-|artigo/; apresentacao/|Manuscrito v2, histórico v1, figuras/tabelas e cinco slides Markdown|
-|.venv-phase5/; .venv-phase7/|Ambientes Windows/Python; reconstrução limpa ainda não retestada|
+|artigo/; apresentacao/|Manuscrito v4, histórico v1/v2/v3, figuras/tabelas e cinco slides Markdown|
+|.venv-phase5/; .venv-phase7/|Ambientes Windows/Python; versões fixadas nos locks (ver consulta segura)|
 
 ## Consulta segura e reprodução
+
+Raiz operacional após a migração: `C:\Users\Administrador\OneDrive\Documentos\DataMind`. Execute os comandos a partir dessa pasta. Caminhos antigos em registros históricos e manifestos devem permanecer preservados. Use `.\.venv-phase5\Scripts\python.exe -B` para verificações de modelos e `.\.venv-phase7\Scripts\python.exe -B` para o ambiente de figuras; prefira `python -m pip` ao pip global. Os ambientes anteriores foram preservados com sufixo `-pre-migration` e não são os ambientes operacionais.
+
 
 **Saneamento técnico de 05/11/2026:** consulta de integridade atual por `python -B scripts/verify_preservation.py`. O comando não carrega modelos nem grava resultados; distingue snapshots históricos, congelamentos ativos e documentação atual. Testes seguros: `python -B -m unittest discover -s tests -p test_maintenance.py -v`. Não omitir o filtro: a suíte antiga inclui treino/predição sintéticos.
 
@@ -54,7 +63,7 @@ Folds 1–8: desenvolvimento; 9: limiares/validação; 10: teste já utilizado. 
 
 Poucos pacientes positivos; alvo derivado do próprio ECG; ausência de validação externa; painel exploratório; ambiguidades RR_Mean_Global/RRi_max e QRS_Dur_Global/QRSd_max; calibração limitada. AUC alta e sensibilidade observada de 100% não provam diagnóstico independente ou perfeição populacional.
 
-Contribuição incremental de avaliação e cobertura. [Manuscrito v2](artigo/manuscrito_v2.md) pronto para revisão especializada, não para uso clínico ou submissão automática. Faltam cardiologista, bioestatístico, avaliação editorial e decisões institucionais/autoria/licença. [Pacote de revisão](reports/fase9_pendencias.md).
+Contribuição incremental de avaliação e cobertura. [Manuscrito v4](artigo/manuscrito_v4.md) pronto para revisão especializada, não para uso clínico ou submissão automática. Faltam cardiologista, bioestatístico, avaliação editorial e decisões institucionais/autoria/licença. [Pacote de revisão](reports/fase9_pendencias.md).
 
 ## Registro histórico preservado — Fases 1–2
 

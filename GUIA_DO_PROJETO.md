@@ -1,6 +1,6 @@
 # Guia do projeto DataMind
 
-Guia de leitura e preservação — 05/11/2026. Não autoriza novas execuções.
+Guia de leitura e preservação — atualização operacional em 16/11/2026. Raiz atual em `C:\Users\Administrador\OneDrive\Documentos\DataMind`.
 
 **Saneamento técnico concluído no escopo permitido:** ambientes reconstruídos sem inferência, código/documentação com versionamento local ampliado e verificador seguro disponível. Use `python -B scripts/verify_preservation.py` para conferir integridade sem executar modelos. O backup real ainda aguarda dispositivo externo autorizado. [Resultados e limites](reports/saneamento_tecnico_final.md).
 
@@ -12,7 +12,7 @@ Leia nesta ordem:
 
 1. [Resumo da pesquisa](reports/fase9_resumo_pesquisa.md).
 2. [Guia para compreender e defender o estudo](docs/guia_defesa_pesquisa.md).
-3. [Manuscrito atual, versão 2](artigo/manuscrito_v2.md).
+3. [Manuscrito atual, versão 4](artigo/manuscrito_v4.md).
 4. [Resultados científicos finais](reports/fase6_resultados_finais.md).
 5. [Pendências para revisão e publicação](reports/fase9_pendencias.md).
 
@@ -22,7 +22,7 @@ Leia nesta ordem:
 
 A pesquisa atual estuda como a disponibilidade de medidas extraídas do eletrocardiograma afeta cobertura, composição da população avaliada e desempenho de classificadores da **anotação CRBBB**, relacionada ao bloqueio completo do ramo direito. Reconhecer essa anotação do próprio ECG não demonstra diagnóstico independente ou utilidade clínica.
 
-Utilizamos PTB-XL/PTB-XL+, regressões logísticas e estratégias com painéis completos, reduzidos e imputação de ausências. O contraste principal muda tanto o painel quanto o tratamento de ausências: não isola um efeito causal da imputação.
+O estudo utiliza PTB-XL/PTB-XL+, regressões logísticas e estratégias com painéis completos, reduzidos e imputação de ausências. O contraste principal muda tanto o painel quanto o tratamento de ausências: não isola um efeito causal da imputação.
 
 ## O que foi construído nas Fases 1–9
 
@@ -38,7 +38,7 @@ Utilizamos PTB-XL/PTB-XL+, regressões logísticas e estratégias com painéis c
 |8|Revisão crítica automatizada, artigo/manuscrito_v2.md e questões para especialistas.|
 |9|Pacote para revisores humanos, resumo, cinco slides Markdown e matriz de comentários ainda sem pareceres reais.|
 
-A revisão automatizada não substitui avaliação humana independente. O README.md e experiments/README.md descrevem etapas antigas; suas afirmações de que não houve treinamento não representam o estado atual. Foram preservados.
+A revisão humana independente permanece pendente. README.md e experiments/README.md apresentam o estado atual e identificam os trechos históricos. A v3 explicita limitações já registradas; a v4 revisa linguagem e apresentação, preservando os resultados e as versões anteriores. O histórico permite acompanhar essas mudanças.
 
 ## Mapa simples
 
@@ -77,7 +77,7 @@ Protocolos e configurações orientam o fluxo; testes e manifestos verificam int
 |Probabilidades já calculadas|reports/phase6/final001/predictions.csv e scores_*.csv|
 |Métricas e composição finais|reports/phase6/final001/metrics.json e composition.json|
 |Interpretação científica|reports/fase6_interpretacao_cientifica.md|
-|Manuscrito vigente|artigo/manuscrito_v2.md|
+|Manuscrito vigente|artigo/manuscrito_v4.md, revisão editorial com resultados da v2|
 |Apresentação|apresentacao/fase9_apresentacao.md|
 |Decisões|docs/decisoes.md, docs/decisoes_fase7.md e relatórios de decisão por fase|
 
@@ -112,7 +112,7 @@ Consulte docs/fase9_revisao_*.md. A matriz reports/fase9_matriz_feedback.md agua
 
 Preserve dados brutos, modelos, probabilidades, configurações, limiares, protocolos congelados, manifestos, logs finais e PREDICTION_STARTED.lock. Preserve também manuscritos anteriores, resultados negativos, código, fontes e versões das dependências. Um arquivo gerado pode ser evidência essencial.
 
-data/raw/phase3/model.npy contém escores externos do CODE; não é um modelo treinado pelo DataMind. Os ambientes virtuais são reconstruíveis em princípio, mas isso depende de Python e pacotes compatíveis e não foi testado nesta auditoria.
+data/raw/phase3/model.npy contém escores externos do CODE; não é um modelo treinado pelo DataMind. Os ambientes foram reconstruídos após a migração, com versões dos locks, importações e carregamento dos modelos verificados. Consulte reports/verificacao_pos_migracao.md. A reprodução integral do experimento continua não retestada.
 
 ## Como preservar e fazer backup
 
@@ -120,7 +120,7 @@ data/raw/phase3/model.npy contém escores externos do CODE; não é um modelo tr
 2. Confirme disponibilidade local dos arquivos OneDrive e confira restauração e hashes em cópia separada.
 3. Preserve data/, código, configurações, documentação e reports/, incluindo modelos e probabilidades. Só o manuscrito não permite auditoria.
 4. Considere backups menores sem ambientes somente após validar sua reconstrução. Preserve locks, versões e código necessário para carregar modelos.
-5. Git não substitui backup. A branch atual não tem commits nem arquivos rastreados, embora .git contenha objetos e referências. É necessário estabelecer posteriormente um histórico versionado revisado.
+5. A base histórica da branch master contém três commits, até 55b3508, com correspondência remota conferida. A revisão de linguagem acrescenta um commit local, sem envio automático; consultar git log e reports/revisao_linguagem_autoria.md para o estado desta revisão. Preserve também dados, modelos e probabilidades em backup independente.
 
 Não publique automaticamente dados de saúde, identificadores ou artigos baixados. Permissões variam entre fontes; a licença geral do código é pendente.
 

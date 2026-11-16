@@ -1,6 +1,6 @@
 # Estado do DataMind
 
-Atualizado em 05/11/2026 — saneamento técnico. Estados técnicos não representam validação clínica. Evidências em reports/saneamento_tecnico_final.md.
+Atualizado em 16/11/2026 — aprimoramento editorial. Estado técnico apoiado no saneamento e na verificação pós-migração de 05/11/2026. Plano de revisão em reports/aprimoramento_pesquisa_2026-11-16.md.
 
 |Área|Estado|Situação / responsável ou perfil necessário|
 |---|---|---|
@@ -15,7 +15,7 @@ Atualizado em 05/11/2026 — saneamento técnico. Estados técnicos não represe
 |Reconstrução dos ambientes|CONCLUÍDO|Duas venvs temporárias; locks exatos, pip check/importações e leitura de sete modelos passaram; originais preservados|
 |Reprodução completa nova|NÃO VERIFICADO|Não executados retreino, predição, reextração ECGDeli ou novas métricas|
 |Snapshots e verificador seguro|CONCLUÍDO|Novo verificador somente leitura; quatro diferenças históricas explícitas, duas versões antigas recuperadas; nove testes de manutenção passaram|
-|Manuscrito v2|CONCLUÍDO — rascunho|Preparado para revisão externa, preservado nesta manutenção|
+|Manuscrito v4|CONCLUÍDO — rascunho editorial|Pergunta explícita, dicionário das medidas e limites de seleção detalhados; revisão humana PENDENTE|
 |Revisão externa humana|PENDENTE|Cardiologista, bioestatístico e pesquisador/editor; pacote Fase 9 pronto, sem pareceres reais registrados|
 |Git local|VALIDADO INTERNAMENTE — ampliado|Todo código próprio, testes, configurações, protocolos, manuscritos e documentos científicos principais; dados/modelos ficam no backup; primeiro commit preservado|
 |Backup independente|PENDENTE|Só disco físico 0/C: acessível; conectar e autorizar diretório privado em outro disco. Ferramenta de cópia/restauração testada apenas com fixtures|
@@ -31,8 +31,8 @@ Poucos positivos (54 exames/45 pacientes); dependência de construto entre medid
 
 1. Pesquisadora + apoio de TI: escolher destino externo privado e validar backup.
 2. Cardiologista + bioestatístico: resolver questões dos roteiros da Fase 9.
-3. Pesquisadora + orientador/editor: decidir formato após pareceres, completar condições institucionais e de autoria.
+3. Pesquisadora + pesquisador/editor a consultar: decidir formato após pareceres, completar condições institucionais e de autoria.
 
-[Entenda a IA](docs/ENTENDA_A_IA.md) · [Guia](GUIA_DO_PROJETO.md) · [Auditoria](reports/auditoria_master.md) · [Manuscrito](artigo/manuscrito_v2.md).
+[Entenda a IA](docs/ENTENDA_A_IA.md) · [Guia](GUIA_DO_PROJETO.md) · [Auditoria](reports/auditoria_master.md) · [Manuscrito](artigo/manuscrito_v4.md).
 
 Não há nova aprovação científica, envio a terceiros ou publicação decorrente desta auditoria.
