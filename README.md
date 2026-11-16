@@ -87,6 +87,8 @@ Para informações sobre ambientes, preservação e recuperação dos resultados
 
 ## Documentação
 
+- [Apresentação da pesquisa](apresentacao/apresentacao_pesquisa.md)
+
 - [Manuscrito atual](artigo/manuscrito_v4.md)
 - [Resultados da avaliação final](reports/fase6_resultados_finais.md)
 - [Guia do projeto](GUIA_DO_PROJETO.md)

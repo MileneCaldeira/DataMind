@@ -78,7 +78,7 @@ Protocolos e configurações orientam o fluxo; testes e manifestos verificam int
 |Métricas e composição finais|reports/phase6/final001/metrics.json e composition.json|
 |Interpretação científica|reports/fase6_interpretacao_cientifica.md|
 |Manuscrito vigente|artigo/manuscrito_v4.md, revisão editorial com resultados da v2|
-|Apresentação|apresentacao/fase9_apresentacao.md|
+|Apresentação|apresentacao/apresentacao_pesquisa.md|
 |Decisões|docs/decisoes.md, docs/decisoes_fase7.md e relatórios de decisão por fase|
 
 Arquivos .py são programas; .json são configurações ou resultados; .csv são tabelas; .joblib guardam modelos; .md são textos; .png/.svg/.pdf são figuras. Ler resultados não exige executar programas.
